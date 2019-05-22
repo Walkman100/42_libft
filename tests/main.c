@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
+/*   Updated: 2019/05/22 12:46:14 by mcarter          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 //#include <stdlib.h>
 
@@ -5,7 +17,7 @@ void	testfunc_i(char *func_name, int input, int test);
 void	testfunc_s(char *func_name, char *input, char *test);
 int		strequ(const char *str1, const char *str2);
 
-int	main() //int argc, char** argv)
+int	main(void) //int argc, char** argv)
 {
 	ft_putchar_fd('o', 1);
 	ft_putchar_fd('e', 2);
@@ -45,7 +57,7 @@ int	main() //int argc, char** argv)
 	testfunc_i("ft_tolower1", ft_tolower('G'), 'g');
 	testfunc_i("ft_tolower2", ft_tolower('A'), 'a');
 	testfunc_i("ft_tolower3", ft_tolower('7'), '7');
-	
+
 	char buf[128] = "2";
 	ft_strcpy(buf, "test");
 	testfunc_s("ft_strcpy  ", buf, "test");
@@ -58,8 +70,7 @@ int	main() //int argc, char** argv)
 	ft_strncpy(buf, "t", 128);
 	testfunc_s("ft_strncat1", ft_strncat(buf, "esttesttest", 3), "test");
 	testfunc_s("ft_strncat2", ft_strncat(buf, "test", 8), "testtest");
-	
-	
+
 	return (0);
 }
 
