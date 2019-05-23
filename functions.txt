@@ -21,11 +21,11 @@ ft_strcat       char *ft_strcat(char *dest, const char *src);                   
 ft_strncat      char *ft_strncat(char *dest, const char *src, size_t n);        Y
 ft_strcmp       int ft_strcmp(const char *s1, const char *s2);                  Y
 ft_strncmp      int ft_strncmp(const char *s1, const char *s2, size_t n);       Y
+ft_strstr       char *ft_strstr(const char *haystack, const char *needle);      Y
+ft_strnstr      char *ft_strnstr(const char *haystack, const char *needle, size_t len); Y
 
 
 ft_atoi         int ft_atoi(const char *nptr);                                  N
-ft_strstr       char *ft_strstr(const char *haystack, const char *needle);      N
-ft_strnstr      char *ft_strnstr(const char *big, const char *little, size_t len); N
 ft_strdup       char *ft_strdup(const char *s);                                 N
 ft_itoa         char *ft_itoa(int n);                                           N
 
