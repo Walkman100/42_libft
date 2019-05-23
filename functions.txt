@@ -19,16 +19,15 @@ ft_strcpy       char *ft_strcpy(char *dest, const char *src);                   
 ft_strncpy      char *ft_strncpy(char *dest, const char *src, size_t n);        Y
 ft_strcat       char *ft_strcat(char *dest, const char *src);                   Y
 ft_strncat      char *ft_strncat(char *dest, const char *src, size_t n);        Y
+ft_strcmp       int ft_strcmp(const char *s1, const char *s2);                  Y
+ft_strncmp      int ft_strncmp(const char *s1, const char *s2, size_t n);       Y
 
 
 ft_atoi         int ft_atoi(const char *nptr);                                  N
-ft_strcmp       int ft_strcmp(const char *s1, const char *s2);                  N
-ft_strncmp      int ft_strncmp(const char *s1, const char *s2, size_t n);       N
 ft_strstr       char *ft_strstr(const char *haystack, const char *needle);      N
 ft_strnstr      char *ft_strnstr(const char *big, const char *little, size_t len); N
 ft_strdup       char *ft_strdup(const char *s);                                 N
 ft_itoa         char *ft_itoa(int n);                                           N
-
 
 ft_strequ       int ft_strequ(char const *s1, char const *s2);                  N
 ft_strnequ      int ft_strnequ(char const *s1, char const *s2, size_t n);       N
@@ -36,7 +35,6 @@ ft_strsub       char *ft_strsub(char const *s, unsigned int start, size_t len); 
 ft_strjoin      char *ft_strjoin(char const *s1, char const *s2);               N
 ft_strtrim      char *ft_strtrim(char const *s);                                N
 ft_strsplit     char **ft_strsplit(char const *s, char c);                      N
-
 
 ft_memset       void *ft_memset(void *s, int c, size_t n);                      N
 ft_bzero        void ft_bzero(void *s, size_t n);                               N
