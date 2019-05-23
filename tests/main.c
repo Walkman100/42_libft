@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 12:46:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/22 14:16:11 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,19 @@ int	main(void) //int argc, char** argv)
 	ft_strncpy(buf, "t", 128);
 	testfunc_s("ft_strncat1", ft_strncat(buf, "esttesttest", 3), "test");
 	testfunc_s("ft_strncat2", ft_strncat(buf, "test", 8), "testtest");
+
+	testfunc_i("ft_strcmp1", ft_strcmp("test", "test"), 0);
+	testfunc_i("ft_strcmp2", ft_strcmp("tesu", "test"), 1);
+	testfunc_i("ft_strcmp3", ft_strcmp("tess", "test"), -1);
+	testfunc_i("ft_strcmp4", ft_strcmp("abcdefghijklmnop", "abcdefghijklmnop"), 0);
+	testfunc_i("ft_strcmp5", ft_strcmp("TEST", "test"), -32);
+	testfunc_i("ft_strcmp6", ft_strcmp("testtest", "test"), 116);
+
+	testfunc_i("ft_strncmp1", ft_strncmp("test", "test", 50), 0);
+	testfunc_i("ft_strncmp2", ft_strncmp("tesu", "test", 3), 0);
+	testfunc_i("ft_strncmp3", ft_strncmp("TEST", "test", 2), -32);
+	testfunc_i("ft_strncmp4", ft_strncmp("testtest", "test", 4), 0);
+	testfunc_i("ft_strncmp5", ft_strncmp("testtest", "test", 500), 116);
 
 	return (0);
 }
