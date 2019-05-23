@@ -13,8 +13,8 @@
 #include "../libft.h"
 //#include <stdlib.h>
 
-void	testfunc_i(char *func_name, int input, int test);
-void	testfunc_s(char *func_name, char *input, char *test);
+void	testfunc_i(const char *func_name, int input, int test);
+void	testfunc_s(const char *func_name, const char *input, const char *test);
 int		strequ(const char *str1, const char *str2);
 
 int	main(void) //int argc, char** argv)
@@ -84,10 +84,19 @@ int	main(void) //int argc, char** argv)
 	testfunc_i("ft_strncmp4", ft_strncmp("testtest", "test", 4), 0);
 	testfunc_i("ft_strncmp5", ft_strncmp("testtest", "test", 500), 116);
 
+	testfunc_s("ft_strstr1", ft_strstr("12345678901234557890", "123455"), "1234557890");
+	testfunc_s("ft_strstr2", ft_strstr("12345678901234557890", "7890"), "78901234557890");
+	testfunc_s("ft_strstr3", ft_strstr("12345678901234557890", "12344"), NULL);
+
+	testfunc_s("ft_strnstr1", ft_strnstr("12345678901234557890", "123455", 5), NULL);
+	testfunc_s("ft_strnstr2", ft_strnstr("123456", "2345", 5), "23456");
+	testfunc_s("ft_strnstr3", ft_strnstr("123456", "2345", 4), NULL);
+	testfunc_s("ft_strnstr4", ft_strnstr("123456", "", 32), "123456");
+
 	return (0);
 }
 
-void	testfunc_i(char *fn, int i, int t)
+void	testfunc_i(const char *fn, int i, int t)
 {
 	ft_putstr(fn);
 	if (i == t)
@@ -102,7 +111,7 @@ void	testfunc_i(char *fn, int i, int t)
 	}
 }
 
-void	testfunc_s(char *fn, char *i, char *t)
+void	testfunc_s(const char *fn, const char *i, const char *t)
 {
 	ft_putstr(fn);
 	if (strequ(i, t))
@@ -110,9 +119,15 @@ void	testfunc_s(char *fn, char *i, char *t)
 	else
 	{
 		ft_putstr(": N: i:");
-		ft_putstr(i);
+		if (i == NULL)
+			ft_putstr("NULL");
+		else
+			ft_putstr(i);
 		ft_putstr(" t:");
-		ft_putstr(t);
+		if (t == NULL)
+			ft_putstr("NULL");
+		else
+			ft_putstr(t);
 		ft_putchar('\n');
 	}
 }
@@ -121,6 +136,10 @@ int	strequ(const char *s1, const char *s2)
 {
 	int i;
 
+	if (s1 == NULL && s2 == NULL)
+		return (1);
+	else if (s1 == NULL || s2 == NULL)
+		return (0);
 	if (ft_strlen(s1) != ft_strlen(s2))
 		return (0);
 	i = 0;
