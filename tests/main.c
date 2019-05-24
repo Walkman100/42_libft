@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 14:16:11 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:28:55 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int	main(void) //int argc, char** argv)
 	ft_putchar('\n');
 	ft_putnbr(-76365);
 	ft_putendl("  (-76365)");
+	ft_putnbr(-2147483648);
+	ft_putchar(' ');
+	ft_putnbr(2147483647);
+	ft_putendl("  (-2147483648, 2147483647)");
 	testfunc_i("ft_strlen1", ft_strlen("123456"), 6);
 	testfunc_i("ft_strlen2", ft_strlen("this is a long string"), 21);
 	testfunc_i("ft_isalpha1", ft_isalpha('P'), 1);
