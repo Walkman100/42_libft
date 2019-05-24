@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/24 17:42:09 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/24 17:52:49 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,10 @@ int	main(void) //int argc, char** argv)
 	buf_i = 896876;
 	ft_bzero(&buf_i, sizeof(buf_i));
 	testfunc_i("ft_bzero", buf_i, 0);
+
+	ft_strncpy(buf, "abcdef", 128);
+	ft_strclr(buf);
+	testfunc_s("ft_strclr", buf, "");
 
 	return (0);
 }
