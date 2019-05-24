@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/05/24 08:24:00 by mcarter          ###   ########.fr        #
+#    Updated: 2019/05/24 14:45:23 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
          ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o ft_strlen.o \
          ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o \
          ft_toupper.o ft_tolower.o ft_strcpy.o ft_strncpy.o ft_strcat.o \
-		 ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strnstr.o
+		 ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strnstr.o \
+		 ft_memset.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 

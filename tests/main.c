@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/24 10:28:55 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/24 16:43:09 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,20 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strnstr2", ft_strnstr("123456", "2345", 5), "23456");
 	testfunc_s("ft_strnstr3", ft_strnstr("123456", "2345", 4), NULL);
 	testfunc_s("ft_strnstr4", ft_strnstr("123456", "", 32), "123456");
+
+	ft_memset(buf, 's', 4 * sizeof(*buf));
+	testfunc_s("ft_memset1", buf, "sssstest");
+
+	int buf_i = 4;
+	ft_memset(&buf_i, 0, sizeof(buf_i));
+	testfunc_i("ft_memset2", buf_i, 0);
+	ft_memset(&buf_i, -1, sizeof(buf_i));
+	testfunc_i("ft_memset3", buf_i, -1);
+	ft_memset(&buf_i, 1, sizeof(buf_i));
+	testfunc_i("ft_memset4", buf_i, 16843009);
+	short buf_s = 23;
+	ft_memset(&buf_s, 1, sizeof(buf_s));
+	testfunc_i("ft_memset5", buf_s, 257);
 
 	return (0);
 }
