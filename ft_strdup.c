@@ -14,5 +14,10 @@
 
 char	*ft_strdup(const char *s)
 {
-	
+	char	*str;
+
+	str = ft_strnew(ft_strlen(s) + 1);
+	if (str == NULL)
+		return (NULL);
+	return (ft_strcpy(str, s));
 }
