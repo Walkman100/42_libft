@@ -129,6 +129,7 @@ int	main(void) //int argc, char** argv)
 	buf2[2] = 's';
 	buf2[3] = 't';
 	testfunc_s("ft_memalloc1", buf2, "test");
+	free(buf2);
 	
 	int *buf_i2;
 	buf_i2 = ft_memalloc(sizeof(*buf_i2) * 2);
@@ -136,6 +137,13 @@ int	main(void) //int argc, char** argv)
 	testfunc_i("ft_memalloc2", buf_i2[0], 5874);
 	buf_i2[1] = 924672;
 	testfunc_i("ft_memalloc3", buf_i2[1], 924672);
+	
+	buf2 = ft_strnew(5);
+	buf2[0] = 't';
+	buf2[1] = 'e';
+	buf2[2] = 's';
+	buf2[3] = 't';
+	testfunc_s("ft_strnew", buf2, "test");
 
 	return (0);
 }
