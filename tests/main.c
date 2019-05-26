@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/24 17:52:49 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/24 18:07:48 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,14 +113,29 @@ int	main(void) //int argc, char** argv)
 
 	ft_strncpy(buf, "abcdef", 128);
 	ft_bzero(buf, 4);
-	testfunc_s("ft_bzero", buf, "");
+	testfunc_s("ft_bzero1", buf, "");
 	buf_i = 896876;
 	ft_bzero(&buf_i, sizeof(buf_i));
-	testfunc_i("ft_bzero", buf_i, 0);
+	testfunc_i("ft_bzero2", buf_i, 0);
 
 	ft_strncpy(buf, "abcdef", 128);
 	ft_strclr(buf);
 	testfunc_s("ft_strclr", buf, "");
+
+	char *buf2;
+	buf2 = ft_memalloc(5);
+	buf2[0] = 't';
+	buf2[1] = 'e';
+	buf2[2] = 's';
+	buf2[3] = 't';
+	testfunc_s("ft_memalloc1", buf2, "test");
+	
+	int *buf_i2;
+	buf_i2 = ft_memalloc(sizeof(*buf_i2) * 2);
+	buf_i2[0] = 5874;
+	testfunc_i("ft_memalloc2", buf_i2[0], 5874);
+	buf_i2[1] = 924672;
+	testfunc_i("ft_memalloc3", buf_i2[1], 924672);
 
 	return (0);
 }
