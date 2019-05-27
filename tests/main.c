@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/24 18:07:48 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/27 11:24:02 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,18 @@ int	main(void) //int argc, char** argv)
 	buf2[1] = 'e';
 	testfunc_s("ft_strdup2", buf2, "test");
 	free(buf2);
+
+	testfunc_i("ft_strequ1", ft_strequ("test", "test"), 1);
+	testfunc_i("ft_strequ2", ft_strequ("tesu", "test"), 0);
+	testfunc_i("ft_strequ3", ft_strequ("testtest", "test"), 0);
+	testfunc_i("ft_strequ4", ft_strequ(NULL, NULL), 1);
+	testfunc_i("ft_strequ5", ft_strequ("test", NULL), 0);
+
+	testfunc_i("ft_strnequ1", ft_strnequ("test", "test", 50), 1);
+	testfunc_i("ft_strnequ2", ft_strnequ("tesu", "test", 3), 1);
+	testfunc_i("ft_strnequ3", ft_strnequ("TEST", "test", 2), 0);
+	testfunc_i("ft_strnequ4", ft_strnequ("testtest", "test", 4), 1);
+	testfunc_i("ft_strnequ5", ft_strnequ("testtest", "test", 500), 0);
 
 	return (0);
 }
