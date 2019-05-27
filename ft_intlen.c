@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:29:23 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 15:51:24 by mcarter          ###   ########.fr       */
+/*   Created: 2019/05/27 11:39:28 by mcarter           #+#    #+#             */
+/*   Updated: 2019/05/27 11:43:13 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int	ft_intlen(int i)
 {
-	char	*rtn;
-	int		nlen;
-	int		is_negative;
-
-	nlen = ft_intlen(n);
-	rtn = ft_strnew(nlen + 1);
-	is_negative = (n < 0);
-	if (is_negative)
+	if (i < 0)
 	{
-		rtn[0] = '-';
-		rtn[nlen - 1] = -(n % 10) + '0';
-		n = -(n / 10);
-		nlen--;
+		if (-i < 0)
+			return (ft_intlen(-(i / 10)) + 2);
+		else
+			return (ft_intlen(-i) + 1);
 	}
-	while (nlen > 0 + (is_negative))
-	{
-		rtn[nlen - 1] = (n % 10) + '0';
-		n = n / 10;
-		nlen--;
-	}
-	return (rtn);
+	else if (i > 9)
+		return (ft_intlen(i / 10) + 1);
+	else
+		return (1);
 }

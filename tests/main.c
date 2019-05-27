@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 11:24:02 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/27 13:35:46 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,14 @@ int	main(void) //int argc, char** argv)
 	testfunc_i("ft_strnequ3", ft_strnequ("TEST", "test", 2), 0);
 	testfunc_i("ft_strnequ4", ft_strnequ("testtest", "test", 4), 1);
 	testfunc_i("ft_strnequ5", ft_strnequ("testtest", "test", 500), 0);
+
+	testfunc_s("ft_itoa1", ft_itoa(1486798), "1486798");
+	testfunc_s("ft_itoa2", ft_itoa(-25678), "-25678");
+	testfunc_s("ft_itoa3", ft_itoa(2147483647), "2147483647");
+	testfunc_s("ft_itoa4", ft_itoa(-2147483648), "-2147483648");
+	testfunc_s("ft_itoa5", ft_itoa(4), "4");
+	testfunc_s("ft_itoa6", ft_itoa(-3), "-3");
+	testfunc_s("ft_itoa7", ft_itoa(0), "0");
 
 	return (0);
 }

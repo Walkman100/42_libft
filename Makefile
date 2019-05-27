@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/05/27 09:13:02 by mcarter          ###   ########.fr        #
+#    Updated: 2019/05/27 11:45:02 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
          ft_toupper.o ft_tolower.o ft_strcpy.o ft_strncpy.o ft_strcat.o \
 		 ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strnstr.o \
 		 ft_memset.o ft_bzero.o ft_strclr.o ft_memalloc.o ft_strnew.o \
-		 ft_strdup.o ft_strequ.o ft_strnequ.o
+		 ft_strdup.o ft_strequ.o ft_strnequ.o ft_intlen.o ft_itoa.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -170,6 +170,9 @@ ft_strtrim.o: ft_strtrim.c
 
 ft_strsplit.o: ft_strsplit.c
 	gcc $(GCCFLAGS) -c ft_strsplit.c
+
+ft_intlen.o: ft_intlen.c
+	gcc $(GCCFLAGS) -c ft_intlen.c
 
 ft_itoa.o: ft_itoa.c
 	gcc $(GCCFLAGS) -c ft_itoa.c
