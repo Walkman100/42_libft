@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 13:35:46 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/27 17:43:20 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,6 +171,12 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_itoa5", ft_itoa(4), "4");
 	testfunc_s("ft_itoa6", ft_itoa(-3), "-3");
 	testfunc_s("ft_itoa7", ft_itoa(0), "0");
+
+	testfunc_i("ft_atoi1", ft_atoi("1486798"), 1486798);
+	testfunc_i("ft_atoi2", ft_atoi("-25678"), -25678);
+	testfunc_i("ft_atoi3", ft_atoi("2147483647"), 2147483647);
+	testfunc_i("ft_atoi4", ft_atoi("-2147483648"), -2147483648);
+	testfunc_i("ft_atoi5", ft_atoi(" \f\n\r\t\v58000350retratercaht"), 58000350);
 
 	return (0);
 }
