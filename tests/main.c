@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/28 11:25:25 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/28 13:36:24 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,6 +186,24 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strjoin1", ft_strjoin("abcd", "efgh"), "abcdefgh");
 	testfunc_s("ft_strjoin2", ft_strjoin("g843y7bf", "o89ym9"), "g843y7bfo89ym9");
 
+	testfunc_s("ft_strtrim1", ft_strtrim(" \n \t test \n \t "), "test");
+	testfunc_s("ft_strtrim2", ft_strtrim(" \ttest"), "test");
+	testfunc_s("ft_strtrim3", ft_strtrim("test \t"), "test");
+	testfunc_s("ft_strtrim4", ft_strtrim("test"), "test");
+
+	char **arr;
+	arr = ft_strsplit("*hello*fellow***students*", '*');
+	testfunc_s("ft_strsplit1.1", arr[0], "hello");
+	testfunc_s("ft_strsplit1.2", arr[1], "fellow");
+	testfunc_s("ft_strsplit1.3", arr[2], "students");
+
+	arr = ft_strsplit("ohhtochcorhteohtcrehoctcecohec", 't');
+	testfunc_s("ft_strsplit2.1", arr[0], "ohh");
+	testfunc_s("ft_strsplit2.2", arr[1], "ochcorh");
+	testfunc_s("ft_strsplit2.3", arr[2], "eoh");
+	testfunc_s("ft_strsplit2.4", arr[3], "crehoc");
+	testfunc_s("ft_strsplit2.5", arr[4], "cecohec");
+	
 	return (0);
 }
 
