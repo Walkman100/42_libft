@@ -36,10 +36,10 @@ ft_memset       void *ft_memset(void *s, int c, size_t n);                      
   ft_memalloc   void *ft_memalloc(size_t size);                                 Y
    ft_strnew    char *ft_strnew(size_t size);                                   Y
     ft_strdup   char *ft_strdup(const char *s);                                 Y
+    ft_strsub   char *ft_strsub(char const *s, unsigned int start, size_t len); Y
+    ft_strjoin  char *ft_strjoin(char const *s1, char const *s2);               Y
 
 
-ft_strsub       char *ft_strsub(char const *s, unsigned int start, size_t len); N
-ft_strjoin      char *ft_strjoin(char const *s1, char const *s2);               N
 ft_strtrim      char *ft_strtrim(char const *s);                                N
 ft_strsplit     char **ft_strsplit(char const *s, char c);                      N
 

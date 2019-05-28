@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 17:43:20 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/28 11:25:25 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,6 +177,14 @@ int	main(void) //int argc, char** argv)
 	testfunc_i("ft_atoi3", ft_atoi("2147483647"), 2147483647);
 	testfunc_i("ft_atoi4", ft_atoi("-2147483648"), -2147483648);
 	testfunc_i("ft_atoi5", ft_atoi(" \f\n\r\t\v58000350retratercaht"), 58000350);
+	testfunc_i("ft_atoi6", ft_atoi("oggco2147dud3727pd2dd37d"), 2147);
+
+	testfunc_s("ft_strsub1", ft_strsub("1234567890", 4, 4), "5678");
+	testfunc_s("ft_strsub2", ft_strsub("',.pyfgcrl/=aoeuidhtns-\\`;qjkxbmwvz", 15, 6), "uidhtn");
+	testfunc_s("ft_strsub3", ft_strsub("abcdefghijk", 6, 10), "ghijk");
+	
+	testfunc_s("ft_strjoin1", ft_strjoin("abcd", "efgh"), "abcdefgh");
+	testfunc_s("ft_strjoin2", ft_strjoin("g843y7bf", "o89ym9"), "g843y7bfo89ym9");
 
 	return (0);
 }
