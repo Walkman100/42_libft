@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:25:36 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 12:25:38 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/28 14:23:16 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return (ft_memalloc(sizeof(char) * size));
+	return ((char *)ft_memalloc(sizeof(char) * size));
 }
