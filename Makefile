@@ -28,7 +28,8 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		 ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strnstr.o \
 		 ft_memset.o ft_bzero.o ft_strclr.o ft_memalloc.o ft_strnew.o \
 		 ft_strdup.o ft_strequ.o ft_strnequ.o ft_intlen.o ft_itoa.o \
-		 ft_atoi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o
+		 ft_atoi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
+         ft_strlcat.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 

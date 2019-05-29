@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/28 13:36:24 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/28 15:51:14 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,18 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strncat1", ft_strncat(buf, "esttesttest", 3), "test");
 	testfunc_s("ft_strncat2", ft_strncat(buf, "test", 8), "testtest");
 
+	ft_strncpy(buf, "t", 128);
+	testfunc_i("ft_strlcat1.1", ft_strlcat(buf, "esttesttest", 5), 12);
+	testfunc_s("ft_strlcat1.2", buf, "test");
+	testfunc_i("ft_strlcat2.1", ft_strlcat(buf, "test", 9), 8);
+	testfunc_s("ft_strlcat2.2", buf, "testtest");
+	testfunc_i("ft_strlcat3.1", ft_strlcat(buf, "abcd", 9), 12);
+	testfunc_s("ft_strlcat3.2", buf, "testtest");
+	testfunc_i("ft_strlcat4.1", ft_strlcat(buf, "abcd", 10), 12);
+	testfunc_s("ft_strlcat4.2", buf, "testtesta");
+	testfunc_i("ft_strlcat5.1", ft_strlcat(buf, "defg", 9), 9);
+	testfunc_s("ft_strlcat5.1", buf, "testtesta");
+
 	testfunc_i("ft_strcmp1", ft_strcmp("test", "test"), 0);
 	testfunc_i("ft_strcmp2", ft_strcmp("tesu", "test"), 1);
 	testfunc_i("ft_strcmp3", ft_strcmp("tess", "test"), -1);
@@ -97,6 +109,7 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strnstr3", ft_strnstr("123456", "2345", 4), NULL);
 	testfunc_s("ft_strnstr4", ft_strnstr("123456", "", 32), "123456");
 
+	ft_strncpy(buf, "testtest", 128);
 	ft_memset(buf, 's', 4 * sizeof(*buf));
 	testfunc_s("ft_memset1", buf, "sssstest");
 
