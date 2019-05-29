@@ -18,8 +18,9 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	is_negative;
 
-	i = 0;
 	rtn = 0;
+	i = 0;
+	is_negative = 1;
 	while (!(ft_isdigit(str[i]) || str[i] == '-'))
 		i++;
 	if (str[i] == '-')
