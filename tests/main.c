@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/30 11:24:52 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:17:29 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,6 +224,14 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strsplit2.3", arr[2], "eoh");
 	testfunc_s("ft_strsplit2.4", arr[3], "crehoc");
 	testfunc_s("ft_strsplit2.5", arr[4], "cecohec");
+
+	buf2 = ft_strdup("ipoecrhercibhepcrdh.epdhmc.hiydmcgph");
+	ft_memdel((void**)&buf2);
+	testfunc_s("ft_memdel", buf2, NULL);
+
+	buf2 = ft_strdup("cihcohicohohch,'c'pg8298gph98gp908h");
+	ft_strdel(&buf2);
+	testfunc_s("ft_strdel", buf2, NULL);
 	
 	return (0);
 }
