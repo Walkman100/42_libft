@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:28:27 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 12:28:28 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:16:30 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return ((char*)s);
+		s++;
+	}
+	if (*s == c)
+		return ((char*)s);
+	return (NULL);
 }

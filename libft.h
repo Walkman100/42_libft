@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/30 09:59:09 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/30 10:01:38 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,31 +68,31 @@ char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 int		ft_intlen(int n);
 char	*ft_itoa(int n);
-# define RESET     "\033[0m"
-# define BLACK     "\033[30m"
-# define RED       "\033[31m"
-# define GREEN     "\033[32m"
-# define YELLOW    "\033[33m"
-# define BLUE      "\033[34m"
-# define MAGENTA   "\033[35m"
-# define CYAN      "\033[36m"
-# define WHITE     "\033[37m"
-# define BCK_BLACK   "\033[31m"
-# define BCK_RED     "\033[41m"
-# define BCK_GREEN   "\033[42m"
-# define BCK_YELLOW  "\033[43m"
-# define BCK_BLUE    "\033[44m"
-# define BCK_MAGENTA "\033[45m"
-# define BCK_CYAN    "\033[46m"
-# define BCK_WHITE   "\033[47m"
-# define BBLACK     "\033[1;30m"
-# define BRED       "\033[1;31m"
-# define BGREEN     "\033[1;32m"
-# define BYELLOW    "\033[1;33m"
-# define BBLUE      "\033[1;34m"
-# define BMAGENTA   "\033[1;35m"
-# define BCYAN      "\033[1;36m"
-# define BWHITE     "\033[1;37m"
+# define RESET        "\033[0m"
+# define BLACK        "\033[30m"
+# define RED          "\033[31m"
+# define GREEN        "\033[32m"
+# define YELLOW       "\033[33m"
+# define BLUE         "\033[34m"
+# define MAGENTA      "\033[35m"
+# define CYAN         "\033[36m"
+# define WHITE        "\033[37m"
+# define BCK_BLACK    "\033[31m"
+# define BCK_RED      "\033[41m"
+# define BCK_GREEN    "\033[42m"
+# define BCK_YELLOW   "\033[43m"
+# define BCK_BLUE     "\033[44m"
+# define BCK_MAGENTA  "\033[45m"
+# define BCK_CYAN     "\033[46m"
+# define BCK_WHITE    "\033[47m"
+# define BBLACK       "\033[1;30m"
+# define BRED         "\033[1;31m"
+# define BGREEN       "\033[1;32m"
+# define BYELLOW      "\033[1;33m"
+# define BBLUE        "\033[1;34m"
+# define BMAGENTA     "\033[1;35m"
+# define BCYAN        "\033[1;36m"
+# define BWHITE       "\033[1;37m"
 # define BCK_BBLACK   "\033[1;31m"
 # define BCK_BRED     "\033[1;41m"
 # define BCK_BGREEN   "\033[1;42m"

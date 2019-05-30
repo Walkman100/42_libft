@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/28 15:51:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/30 11:24:52 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,14 @@ int	main(void) //int argc, char** argv)
 	testfunc_s("ft_strnstr2", ft_strnstr("123456", "2345", 5), "23456");
 	testfunc_s("ft_strnstr3", ft_strnstr("123456", "2345", 4), NULL);
 	testfunc_s("ft_strnstr4", ft_strnstr("123456", "", 32), "123456");
+
+	testfunc_s("ft_strchr1", ft_strchr("12345678901234557890", '7'), "78901234557890");
+	testfunc_s("ft_strchr2", ft_strchr("abcdefghi", 'i'), "i");
+	testfunc_s("ft_strchr2", ft_strchr("abcd", '\0'), "");
+
+	testfunc_s("ft_strrchr1", ft_strrchr("12345678901234557890", '7'), "7890");
+	testfunc_s("ft_strrchr2", ft_strrchr("abcdefghi", 'b'), "bcdefghi");
+	testfunc_s("ft_strrchr3", ft_strrchr("abcd", '\0'), "");
 
 	ft_strncpy(buf, "testtest", 128);
 	ft_memset(buf, 's', 4 * sizeof(*buf));
