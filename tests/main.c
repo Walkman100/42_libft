@@ -22,12 +22,12 @@ int	main(void) //int argc, char** argv)
 	ft_putchar_fd('o', 1);
 	ft_putchar_fd('e', 2);
 	ft_putchar('o');
-	ft_putstr_fd(" stdout", 1);
-	ft_putstr_fd(" strerr", 2);
-	ft_putstr(" stdout\n");
-	ft_putendl_fd("stdout", 1);
-	ft_putendl_fd("stderr", 2);
-	ft_putendl("stdout");
+	ft_putstr_fd(" " BYELLOW "stdout" RESET, 1);
+	ft_putstr_fd(" " BRED "stderr" RESET, 2);
+	ft_putstr(" " BYELLOW "stdout" RESET "\n");
+	ft_putendl_fd(BYELLOW "stdout" RESET, 1);
+	ft_putendl_fd(BRED "stderr" RESET, 2);
+	ft_putendl(BYELLOW "stdout" RESET);
 	ft_putnbr_fd(1, 1);
 	ft_putchar(' ');
 	ft_putnbr_fd(2, 2);
@@ -220,39 +220,43 @@ int	main(void) //int argc, char** argv)
 	return (0);
 }
 
-void	testfunc_i(const char *fn, int i, int t)
+void	testfunc_i(const char *fn, int i, int e)
 {
+	ft_putstr(BWHITE);
 	ft_putstr(fn);
-	if (i == t)
-		ft_putendl(": Y");
+	ft_putstr(RESET);
+	if (i == e)
+		ft_putendl(": [" BGREEN "Y" RESET "]");
 	else
 	{
-		ft_putstr(": N: i:");
+		ft_putstr(": [" BRED "N" RESET "]: i:" BMAGENTA);
 		ft_putnbr(i);
-		ft_putstr(" t:");
-		ft_putnbr(t);
-		ft_putchar('\n');
+		ft_putstr(RESET " e:" CYAN);
+		ft_putnbr(e);
+		ft_putendl(RESET);
 	}
 }
 
-void	testfunc_s(const char *fn, const char *i, const char *t)
+void	testfunc_s(const char *fn, const char *i, const char *e)
 {
+	ft_putstr(BWHITE);
 	ft_putstr(fn);
-	if (strequ(i, t))
-		ft_putendl(": Y");
+	ft_putstr(RESET);
+	if (strequ(i, e))
+		ft_putendl(": [" BGREEN "Y" RESET "]");
 	else
 	{
-		ft_putstr(": N: i:");
+		ft_putstr(": [" BRED "N" RESET "]: i:" BMAGENTA);
 		if (i == NULL)
 			ft_putstr("NULL");
 		else
 			ft_putstr(i);
-		ft_putstr(" t:");
-		if (t == NULL)
+		ft_putstr(RESET " e:" CYAN);
+		if (e == NULL)
 			ft_putstr("NULL");
 		else
-			ft_putstr(t);
-		ft_putchar('\n');
+			ft_putstr(e);
+		ft_putendl(RESET);
 	}
 }
 

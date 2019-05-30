@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:23 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 15:51:24 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/05/30 09:57:08 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_itoa(int n)
 		n = -(n / 10);
 		nlen--;
 	}
-	while (nlen > 0 + (is_negative))
+	while (nlen > (0 + is_negative))
 	{
 		rtn[nlen - 1] = (n % 10) + '0';
 		n = n / 10;
