@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   test_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:25:22 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:58:40 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 17:59:57 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 18:03:55 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static char	strmapi_delegate(unsigned int i, char c)
 {
-	unsigned int	i;
-	unsigned int	slen;
-	char			*rtn;
+	c = i + '0';
+	return (c);
+}
 
-	i = 0;
-	slen = ft_strlen(s);
-	rtn = ft_strnew(slen);
-	while (i < slen)
-	{
-		rtn[i] = f(i, s[i]);
-		i++;
-	}
-	return (rtn);
+void		test_strmapi(void)
+{
+	char buf[4];
+
+	ft_strcpy(buf, "5678");
+	testfunc_s("ft_strmapi", ft_strmapi(buf, &strmapi_delegate), "0123");
 }
