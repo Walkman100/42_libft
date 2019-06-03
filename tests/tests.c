@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:26:22 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 15:12:45 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	testfunc_i(const char *fn, int i, int e)
 		ft_putendl(": [" BGREEN "Y" RESET "]");
 	else
 	{
-		ft_putstr(": [" BRED "N" RESET "]: i:" BMAGENTA);
+		ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
 		ft_putnbr(i);
-		ft_putstr(RESET " e:" CYAN);
+		ft_putstr(RESET " expected:" CYAN);
 		ft_putnbr(e);
 		ft_putendl(RESET);
 	}
@@ -38,12 +38,12 @@ void	testfunc_s(const char *fn, const char *i, const char *e)
 		ft_putendl(": [" BGREEN "Y" RESET "]");
 	else
 	{
-		ft_putstr(": [" BRED "N" RESET "]: i:" BMAGENTA);
+		ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
 		if (i == NULL)
 			ft_putstr("NULL");
 		else
 			ft_putstr(i);
-		ft_putstr(RESET " e:" CYAN);
+		ft_putstr(RESET " expected:" CYAN);
 		if (e == NULL)
 			ft_putstr("NULL");
 		else
