@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:02:45 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:02:46 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 10:32:30 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	test_strclr(void)
 {
-	char buf[128] = "abcdef";
+	char buf[128];
+
+	ft_strcpy(buf, "abcdef");
 	ft_strclr(buf);
 	testfunc_s("ft_strclr", buf, "");
 }

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:03:50 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 10:26:22 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	testfunc_s(const char *fn, const char *i, const char *e)
 	}
 }
 
-int	strequ(const char *s1, const char *s2)
+int		strequ(const char *s1, const char *s2)
 {
 	int i;
 

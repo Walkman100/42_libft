@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:13 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:03:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 10:41:36 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	test_strlcat(void)
 {
-	char buf[128] = "t";
+	char buf[128];
+
+	buf[0] = 't';
+	buf[1] = '\0';
 	testfunc_i("ft_strlcat1.1", ft_strlcat(buf, "esttesttest", 5), 12);
 	testfunc_s("ft_strlcat1.2", buf, "test");
 	testfunc_i("ft_strlcat2.1", ft_strlcat(buf, "test", 9), 8);
