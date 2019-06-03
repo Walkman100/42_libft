@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/03 17:23:34 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/03 17:44:33 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		 ft_atoi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
          ft_strlcat.o ft_strchr.o ft_strrchr.o ft_memdel.o ft_strdel.o \
 		 ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
-		 ft_striter.o ft_striteri.o
+		 ft_striter.o ft_striteri.o ft_strmap.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:32:39 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 17:48:44 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,5 @@ void	test_memcmp(void);
 void	test_memchr(void);
 void	test_striter(void);
 void	test_striteri(void);
+void	test_strmap(void);
 #endif

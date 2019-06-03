@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   test_strmap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:25:18 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:44:16 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 17:44:59 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 17:52:40 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+static char	strmap_delegate(char c)
 {
-	int		i;
-	int		slen;
-	char	*rtn;
+	if (c > '6')
+		c = '1';
+	return (c);
+}
 
-	i = 0;
-	slen = ft_strlen(s);
-	rtn = ft_strnew(slen);
-	while (i < slen)
-	{
-		rtn[i] = f(s[i]);
-		i++;
-	}
-	return (rtn);
+void		test_strmap(void)
+{
+	char buf[4];
+
+	ft_strcpy(buf, "5678");
+	testfunc_s("ft_strmap", ft_strmap(buf, &strmap_delegate), "5611");
 }
