@@ -30,7 +30,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		 ft_strdup.o ft_strequ.o ft_strnequ.o ft_intlen.o ft_itoa.o \
 		 ft_atoi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
          ft_strlcat.o ft_strchr.o ft_strrchr.o ft_memdel.o ft_strdel.o \
-		 ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o
+		 ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 

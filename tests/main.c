@@ -47,6 +47,7 @@ int	main(int argc, char **argv)
 		test_memmove();
 		test_memccpy();
 		test_memcmp();
+		test_memchr();
 		return (0);
 	}
 	if (argc > 1)
@@ -116,6 +117,8 @@ int	main(int argc, char **argv)
 			test_memccpy();
 		else if (strequ(argv[1], "memcmp"))
 			test_memcmp();
+		else if (strequ(argv[1], "memchr"))
+			test_memchr();
 		else
 		{
 			ft_putstr_fd(BRED "Test " BCYAN, 2);

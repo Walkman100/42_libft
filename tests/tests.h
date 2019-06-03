@@ -50,4 +50,5 @@ void	test_memcpy(void);
 void	test_memmove(void);
 void	test_memccpy(void);
 void	test_memcmp(void);
+void	test_memchr(void);
 #endif

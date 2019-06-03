@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_strchr.c                                      :+:      :+:    :+:   */
+/*   test_memchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 10:02:41 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 16:02:42 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 15:59:34 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 16:16:49 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-void	test_strchr(void)
+void	test_memchr(void)
 {
-	testfunc_s("ft_strchr1", ft_strchr("345678901234557", '7'), "78901234557");
-	testfunc_s("ft_strchr2", ft_strchr("abcdefghi", 'i'), "i");
-	testfunc_s("ft_strchr3", ft_strchr("abcd", '\0'), "");
-	testfunc_s("ft_strrchr1", ft_strrchr("12345678901234557890", '7'), "7890");
-	testfunc_s("ft_strrchr2", ft_strrchr("abcdefghi", 'b'), "bcdefghi");
-	testfunc_s("ft_strrchr3", ft_strrchr("abcd", '\0'), "");
+	testfunc_s("ft_memchr1", ft_memchr("12345", '3', 3), "345");
+	testfunc_s("ft_memchr2", ft_memchr("12345", '5', 6), "5");
+	testfunc_s("ft_memchr3", ft_memchr("12345", '\0', 6), "");
+	testfunc_s("ft_memchr4", ft_memchr("12345", '4', 3), NULL);
+	testfunc_s("ft_memchr5", ft_memchr("12345", '8', 6), NULL);
 }
