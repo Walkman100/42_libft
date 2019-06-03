@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   test_memccpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:29:18 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 14:25:35 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 14:07:44 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 14:31:10 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	test_memccpy(void)
 {
-	size_t	i;
-	char	*c_dst;
-	char	*c_src;
+	char	buf[128];
 
-	i = 0;
-	c_dst = (char *)dst;
-	c_src = (char *)src;
-	while (i < n && c_src[i - 1] != c)
-	{
-		c_dst[i] = c_src[i];
-		i++;
-	}
-	if (c_src[i - 1] == c)
-		return (dst + i);
-	return (NULL);
+	ft_strncpy(buf, "test", 128);
+	*(char *)ft_memccpy(buf, "abcdefghijklmnop", 'j', 15) = '\0';
+	testfunc_s("ft_memccpy1", buf, "abcdefghij");
+	testfunc_s("ft_memccpy2.1", ft_memccpy(buf, "abcdefghijklmnop", 'r', 15), NULL);
+	testfunc_s("ft_memccpy2.2", buf, "abcdefghijklmno");
 }

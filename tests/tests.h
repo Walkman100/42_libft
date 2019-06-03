@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:03:56 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 14:21:51 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ void	test_memdel(void);
 void	test_strdel(void);
 void	test_memcpy(void);
 void	test_memmove(void);
+void	test_memccpy(void);
 #endif
