@@ -18,8 +18,8 @@ GCCFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) test
 
-test: $(NAME) tests/main.c
-	gcc $(GCCFLAGS) tests/main.c -L. -lft -o test
+test: $(NAME) tests/*.c
+	gcc $(GCCFLAGS) tests/*.c -L. -lft -o test
 
 $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
          ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o ft_strlen.o \
@@ -90,7 +90,7 @@ ft_strlcat.o: ft_strlcat.c
 ft_strchr.o: ft_strchr.c
 	gcc $(GCCFLAGS) -c ft_strchr.c
 
-ft_srrchr.o: ft_strrchr.c
+ft_strrchr.o: ft_strrchr.c
 	gcc $(GCCFLAGS) -c ft_strrchr.c
 
 ft_strstr.o: ft_strstr.c
