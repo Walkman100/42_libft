@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   test_striteri.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:24:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:33:59 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 17:30:54 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 17:32:11 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+static void	striteri_delegate(unsigned int i, char *c)
 {
-	unsigned int	i;
-	unsigned int	slen;
+	*c = i + '0';
+}
 
-	i = 0;
-	slen = ft_strlen(s);
-	while (i < slen)
-	{
-		f(i, &s[i]);
-		i++;
-	}
+void		test_striteri(void)
+{
+	char buf[4];
+
+	ft_strcpy(buf, "5678");
+	ft_striteri(buf, &striteri_delegate);
+	testfunc_s("ft_striteri", buf, "0123");
 }

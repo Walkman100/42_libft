@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 16:45:18 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/03 17:33:12 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int	main(int argc, char **argv)
 		test_memcmp();
 		test_memchr();
 		test_striter();
+		test_striteri();
 		return (0);
 	}
 	if (argc > 1)
@@ -122,6 +123,8 @@ int	main(int argc, char **argv)
 			test_memchr();
 		else if (strequ(argv[1], "striter"))
 			test_striter();
+		else if (strequ(argv[1], "striteri"))
+			test_striteri();
 		else
 		{
 			ft_putstr_fd(BRED "Test " BCYAN, 2);
