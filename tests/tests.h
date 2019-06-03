@@ -47,4 +47,5 @@ void	test_strsplit(void);
 void	test_memdel(void);
 void	test_strdel(void);
 void	test_memcpy(void);
+void	test_memmove(void);
 #endif

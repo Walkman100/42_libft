@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   test_memmove.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:28:59 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 13:29:54 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 10:02:26 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 13:40:55 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	test_memmove(void)
 {
-	void	*tmp;
+	char buf[128];
 
-	tmp = ft_memalloc(n);
-	if (!tmp)
-		return (NULL);
-	ft_memcpy(tmp, src, n);
-	ft_memcpy(dst, tmp, n);
-	free(tmp);
-	return (dst);
+	ft_strcpy(buf, "abcdefghijklmnopqrstuvwxyz");
+	ft_memmove(buf + 10, buf, 20);
+	buf[30] = '\0';
+	testfunc_s("ft_memmove", buf, "abcdefghijabcdefghijklmnopqrst");
 }
