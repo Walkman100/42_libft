@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   test_striter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 12:24:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 16:45:37 by mcarter          ###   ########.fr       */
+/*   Created: 2019/06/03 16:43:56 by mcarter           #+#    #+#             */
+/*   Updated: 2019/06/03 17:14:39 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "tests.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+static void	striter_delegate(char *c)
 {
-	int	i;
-	int slen;
+	if (*c > '6')
+		*c = '1';
+}
 
-	i = 0;
-	slen = ft_strlen(s);
-	while (i < slen)
-	{
-		f(&s[i]);
-		i++;
-	}
+void		test_striter(void)
+{
+	char buf[4];
+
+	ft_strcpy(buf, "5678");
+	ft_striter(buf, &striter_delegate);
+	testfunc_s("ft_striter", buf, "5611");
 }

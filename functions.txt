@@ -51,7 +51,7 @@ ft_memccpy       void *ft_memccpy(void *dest, const void *src, int c, size_t n);
 ft_memcmp        int ft_memcmp(const void *s1, const void *s2, size_t n);        Y
 ft_memchr        void *ft_memchr(const void *s, int c, size_t n);                Y
 
-ft_striter       void ft_striter(char *s, void (*f)(char *));                    N
+ft_striter       void ft_striter(char *s, void (*f)(char *));                    Y
 ft_striteri      void ft_striteri(char *s, void (*f)(unsigned int, char *));     N
 ft_strmap        char *ft_strmap(char const *s, char (*f)(char));                N
 ft_strmapi       char *ft_strmapi(char const *s, char (*f)(unsigned int, char)); N
