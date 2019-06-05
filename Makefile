@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/05 09:08:42 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/05 10:23:24 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ GCCFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) test
 
-test: $(NAME) tests/*.c libft.h
+test: $(NAME) tests/*.c tests/tests.h libft.h
 	gcc $(GCCFLAGS) tests/*.c -L. -lft -o test
 
 $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \

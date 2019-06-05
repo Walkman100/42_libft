@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 15:12:45 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/05 10:21:32 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,35 @@ int		strequ(const char *s1, const char *s2)
 		i++;
 	}
 	return (1);
+}
+
+void	print_list(t_list *list)
+{
+	size_t	i;
+
+	while (list)
+	{
+		ft_putnbr(list->content_size);
+		ft_putstr(" bytes: ");
+		i = 0;
+		while (i < list->content_size)
+		{
+			ft_putchar( ((char *)list->content)[i] );
+			i++;
+		}
+		ft_putchar('\n');
+		list = list->next;
+	}
+}
+
+void	print_list_i(t_list *list)
+{
+	while (list)
+	{
+		ft_putnbr(list->content_size);
+		ft_putstr(" bytes: ");
+		ft_putnbr(*(int *)list->content);
+		ft_putchar('\n');
+		list = list->next;
+	}
 }

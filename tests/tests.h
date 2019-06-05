@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 09:15:16 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/05 10:22:57 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 void	testfunc_i(const char *func_name, int input, int test);
 int		strequ(const char *str1, const char *str2);
 void	testfunc_s(const char *func_name, const char *input, const char *test);
+void	print_list(t_list *list);
+void	print_list_i(t_list *list);
 void	test_put(void);
 void	test_strlen(void);
 void	test_is(void);
