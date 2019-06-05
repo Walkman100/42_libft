@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:59:47 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/05 09:19:01 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,12 @@ int	main(int argc, char **argv)
 		test_striteri();
 		test_strmap();
 		test_strmapi();
+		test_lstnew();
+		test_lstdelone();
+		test_lstdel();
+		test_lstadd();
+		test_lstiter();
+		test_lstmap();
 		return (0);
 	}
 	if (argc > 1)
@@ -131,6 +137,18 @@ int	main(int argc, char **argv)
 			test_strmap();
 		else if (strequ(argv[1], "strmapi"))
 			test_strmapi();
+		else if (strequ(argv[1], "lstnew"))
+			test_lstnew();
+		else if (strequ(argv[1], "lstdelone"))
+			test_lstdelone();
+		else if (strequ(argv[1], "lstdel"))
+			test_lstdel();
+		else if (strequ(argv[1], "lstadd"))
+			test_lstadd();
+		else if (strequ(argv[1], "lstiter"))
+			test_lstiter();
+		else if (strequ(argv[1], "lstmap"))
+			test_lstmap();
 		else
 		{
 			ft_putstr_fd(BRED "Test " BCYAN, 2);

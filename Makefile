@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/03 17:58:52 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/05 09:08:42 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ GCCFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) test
 
-test: $(NAME) tests/*.c
+test: $(NAME) tests/*.c libft.h
 	gcc $(GCCFLAGS) tests/*.c -L. -lft -o test
 
 $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
@@ -205,3 +205,20 @@ ft_putendl_fd.o: ft_putendl_fd.c
 ft_putnbr_fd.o: ft_putnbr_fd.c
 	gcc $(GCCFLAGS) -c ft_putnbr_fd.c
 
+ft_lstnew.o: ft_lstnew.c
+	gcc $(GCCFLAGS) -c ft_lstnew.c
+
+ft_lstdelone.o: ft_lstdelone.c
+	gcc $(GCCFLAGS) -c ft_lstdelone.c
+
+ft_lstdel.o: ft_lstdel.c
+	gcc $(GCCFLAGS) -c ft_lstdel.c
+
+ft_lstadd.o: ft_lstadd.c
+	gcc $(GCCFLAGS) -c ft_lstadd.c
+
+ft_lstiter.o: ft_lstiter.c
+	gcc $(GCCFLAGS) -c ft_lstiter.c
+
+ft_lstmap.o: ft_lstmap.c
+	gcc $(GCCFLAGS) -c ft_lstmap.c
