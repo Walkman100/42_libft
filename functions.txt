@@ -57,7 +57,7 @@ ft_memcmp        int ft_memcmp(const void *s1, const void *s2, size_t n);       
 ft_memchr        void *ft_memchr(const void *s, int c, size_t n);                Y
 
 List:
-ft_lstnew       t_list *ft_lstnew(void const *content, size_t content_size);     N
+ft_lstnew       t_list *ft_lstnew(void const *content, size_t content_size);     Y
 ft_lstdelone    void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));   N
 ft_lstdel       void ft_lstdel(t_list **alst, void (*del)(void *, size_t));      N
 ft_lstadd       void ft_lstadd(t_list **alst, t_list *new);                      N
