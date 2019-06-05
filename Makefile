@@ -16,7 +16,7 @@ OFILES = *.o
 
 GCCFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) test
+all: $(NAME)
 
 test: $(NAME) tests/*.c tests/tests.h libft.h
 	gcc $(GCCFLAGS) tests/*.c -L. -lft -o test
@@ -32,7 +32,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
          ft_strlcat.o ft_strchr.o ft_strrchr.o ft_memdel.o ft_strdel.o \
 		 ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
 		 ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
-		 ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o
+		 ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 

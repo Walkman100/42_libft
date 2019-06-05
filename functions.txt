@@ -62,7 +62,7 @@ ft_lstdelone    void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));  
 ft_lstdel       void ft_lstdel(t_list **alst, void (*del)(void *, size_t));      Y
 ft_lstadd       void ft_lstadd(t_list **alst, t_list *new);                      Y
 ft_lstiter      void ft_lstiter(t_list *lst, void (*f)(t_list *elem));           Y
-ft_lstmap       t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));      N
+ft_lstmap       t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));      Y
 
 
 # P.2 Additional Functions (All Info):

@@ -14,5 +14,20 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
+	t_list	*rtn;
+	t_list	*rtnloop;
+	t_list	*tmp;
 
+	tmp = f(lst);
+	rtn = ft_lstnew(tmp->content, tmp->content_size);
+	rtnloop = rtn;
+	lst = lst->next;
+	while (lst)
+	{
+		tmp = f(lst);
+		rtnloop->next = ft_lstnew(tmp->content, tmp->content_size);
+		rtnloop = rtnloop->next;
+		lst = lst->next;
+	}
+	return (rtn);
 }
