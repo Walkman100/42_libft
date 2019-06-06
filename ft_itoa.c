@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:23 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/06 09:35:37 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:06:41 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	nlen = ft_intlen(n);
-	rtn = ft_strnew(nlen + 1);
+	rtn = ft_strnew(nlen);
 	if (!rtn)
 		return (NULL);
 	is_negative = (n < 0);

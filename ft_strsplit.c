@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:25:47 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/06 09:48:02 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:06:11 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	arrcount = get_split_count(s, c);
 	rtn = ft_memalloc(sizeof(*rtn) * arrcount);
+	if (!rtn)
+		return (NULL);
 	i = 0;
 	while (i < arrcount)
 	{
