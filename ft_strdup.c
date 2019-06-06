@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:24:41 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 12:24:43 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 09:40:57 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char	*str;
 
-	str = ft_strnew(ft_strlen(s) + 1);
+	str = ft_strnew(ft_strlen(s));
 	if (str == NULL)
 		return (NULL);
 	return (ft_strcpy(str, s));

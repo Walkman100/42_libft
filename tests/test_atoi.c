@@ -20,4 +20,6 @@ void	test_atoi(void)
 	testfunc_i("ft_atoi4", ft_atoi("-2147483648"), -2147483648);
 	testfunc_i("ft_atoi5", ft_atoi(" \f\n\r\t\v58000350retrarcaht"), 58000350);
 	testfunc_i("ft_atoi6", ft_atoi("oggco2147dud3727pd2dd37d"), 2147);
+	testfunc_i("ft_atoi7", ft_atoi("45879643875638795679356897268367897"), -1);
+	testfunc_i("ft_atoi8", ft_atoi("-48595648967483768094768478634226763"), 0);
 }
