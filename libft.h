@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 08:59:24 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:48:57 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-void			ft_putchar_fd(char c, int fd);
+void			ft_putchar_fd(size_t c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
-void			ft_putchar(char c);
+void			ft_putnbr_fd(long n, int fd);
+void			ft_putchar(size_t c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
-void			ft_putnbr(int n);
+void			ft_putnbr(long n);
 int				ft_strlen(const char *s);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

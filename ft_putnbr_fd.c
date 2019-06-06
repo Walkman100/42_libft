@@ -6,13 +6,13 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:28:36 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/24 10:25:38 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:49:36 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(long n, int fd)
 {
 	if (n < 0)
 	{
