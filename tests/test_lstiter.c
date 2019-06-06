@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:12:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 13:02:17 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:50:30 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	lstiter_delegate(t_list *elem)
 		*(char *)(elem->content) = '1';
 }
 
-void	test_lstiter(void)
+void		test_lstiter(void)
 {
 	t_list	*list;
 

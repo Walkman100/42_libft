@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:13:33 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 09:19:47 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:50:38 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_list	*lstmap_delegate(t_list *elem)
 	return (elem);
 }
 
-void	test_lstmap(void)
+void			test_lstmap(void)
 {
 	t_list	*list;
 	t_list	*list2;

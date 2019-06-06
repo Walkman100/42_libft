@@ -6,28 +6,17 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/30 14:24:53 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:26:55 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static int	ft_atoi_delegate(const char *str, int i, int is_negative)
 {
 	int	rtn;
-	int	i;
-	int	is_negative;
 
 	rtn = 0;
-	i = 0;
-	is_negative = 1;
-	while (!ft_isdigit(str[i]) && str[i] != '-')
-		i++;
-	if (str[i] == '-')
-	{
-		is_negative = -1;
-		i++;
-	}
 	while (ft_isdigit(str[i]))
 	{
 		rtn += str[i] - '0';
@@ -45,4 +34,25 @@ int	ft_atoi(const char *str)
 		}
 	}
 	return (rtn * is_negative);
+}
+
+int			ft_atoi(const char *str)
+{
+	int	i;
+	int	is_negative;
+
+	i = 0;
+	is_negative = 1;
+	while (!ft_isdigit(str[i]) && str[i] != '-')
+	{
+		if (str[i] == 27)
+			return (0);
+		i++;
+	}
+	if (str[i] == '-')
+	{
+		is_negative = -1;
+		i++;
+	}
+	return (ft_atoi_delegate(str, i, is_negative));
 }

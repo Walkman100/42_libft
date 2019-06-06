@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 10:21:32 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:49:20 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	print_list(t_list *list)
 		i = 0;
 		while (i < list->content_size)
 		{
-			ft_putchar( ((char *)list->content)[i] );
+			ft_putchar(((char *)list->content)[i]);
 			i++;
 		}
 		ft_putchar('\n');

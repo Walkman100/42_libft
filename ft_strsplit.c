@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:25:47 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/06 10:06:11 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:37:09 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ char		**ft_strsplit(char const *s, char c)
 		currlen = 0;
 		while (s[currlen] != c)
 			currlen++;
-		rtn[i] = ft_strsub(s, 0, currlen);
-		if (rtn[i] == NULL)
+		if ((rtn[i] = ft_strsub(s, 0, currlen)) == NULL)
 			return (NULL);
 		s += currlen;
 		i++;
