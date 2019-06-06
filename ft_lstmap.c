@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:05:12 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 09:05:39 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 09:11:13 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*rtnloop;
 	t_list	*tmp;
 
+	if (!lst)
+		return (NULL);
 	tmp = f(lst);
 	rtn = ft_lstnew(tmp->content, tmp->content_size);
 	rtnloop = rtn;

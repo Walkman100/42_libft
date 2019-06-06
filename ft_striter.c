@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:24:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 16:45:37 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 09:44:04 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	i;
 	int slen;
 
+	if (!s)
+		return ;
 	i = 0;
 	slen = ft_strlen(s);
 	while (i < slen)

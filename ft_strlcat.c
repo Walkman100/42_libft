@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:25:07 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/28 15:50:13 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/06 09:45:05 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (dstlen + i < size)
 	{
 		dst[dstlen + i] = '\0';
-		return(dstlen + ft_strlen(src));
+		return (dstlen + ft_strlen(src));
 	}
 	else
 		return (size);
