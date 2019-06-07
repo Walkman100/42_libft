@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:02:48 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 10:49:32 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/07 16:29:19 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,6 @@ void	test_strcmp(void)
 	testfunc_i("ft_strncmp3", ft_strncmp("TEST", "test", 2), -32);
 	testfunc_i("ft_strncmp4", ft_strncmp("testtest", "test", 4), 0);
 	testfunc_i("ft_strncmp5", ft_strncmp("testtest", "test", 500), 116);
+	testfunc_i("ft_strncmp6", ft_strncmp("zyxbcdefgh", "abcdwxyz", 0), 0);
+	testfunc_i("ft_strncmp6", ft_strncmp("abcdefgh", "", 0), 0);
 }

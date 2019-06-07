@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:13 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/06 14:38:39 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:56:58 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ void	test_strlcat(void)
 	testfunc_s("ft_strlcat6.2", buf, "123456");
 	ft_memset(buf, 'B', 32);
 	testfunc_i("ft_strlcat7.1", ft_strlcat(buf, "aaa", 8), 11);
-	buf[64] = '\0';
+	buf[32] = '\0';
 	testfunc_s("ft_strlcat7.2", buf, "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+	ft_strncpy(buf, "1234", 128);
+	testfunc_i("ft_strlcat8.1", ft_strlcat(buf, "5678", 0), 4);
+	testfunc_s("ft_strlcat8.2", buf, "1234");
 }
