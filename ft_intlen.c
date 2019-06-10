@@ -6,13 +6,13 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:39:28 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 11:43:13 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/10 10:06:38 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int i)
+int	ft_intlen(long i)
 {
 	if (i < 0)
 	{

@@ -23,12 +23,12 @@ void			ft_putchar(size_t c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
 void			ft_putnbr(long n);
-int				ft_strlen(const char *s);
-int				ft_isalpha(int c);
-int				ft_isdigit(int c);
-int				ft_isalnum(int c);
-int				ft_isascii(int c);
-int				ft_isprint(int c);
+size_t				ft_strlen(const char *s);
+int				ft_isalpha(size_t c);
+int				ft_isdigit(size_t c);
+int				ft_isalnum(size_t c);
+int				ft_isascii(size_t c);
+int				ft_isprint(size_t c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			*ft_strcpy(char *dst, const char *src);
@@ -67,7 +67,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
-int				ft_intlen(int n);
+int				ft_intlen(long n);
 char			*ft_itoa(int n);
 
 typedef struct	s_list

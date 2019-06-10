@@ -6,13 +6,13 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/22 12:29:27 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/10 10:04:33 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+int	ft_isprint(size_t c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);
