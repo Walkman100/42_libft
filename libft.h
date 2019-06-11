@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/11 13:25:44 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/11 13:54:14 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void			ft_strdel(char **as);
 void			ft_strclr(char *s);
 char			*ft_strdup(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
+char			*ft_strrev(char *str);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);

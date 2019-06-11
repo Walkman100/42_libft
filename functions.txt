@@ -29,6 +29,7 @@ ft_strstr        char *ft_strstr(const char *haystack, const char *needle);     
 ft_strnstr       char *ft_strnstr(const char *haystack, const char *needle, size_t len); Y
 ft_strchr        char *ft_strchr(const char *s, int c);                          Y
 ft_strrchr       char *ft_strrchr(const char *s, int c);                         Y
+ft_strrev        char *ft_strrev(char *str);                                     Y
 ft_intlen        int ft_intlen(int i);                                           Y
  ft_itoa         char *ft_itoa(int n);                                           Y
 ft_iswhitespace  int ft_iswhitespace(int c);                                     Y

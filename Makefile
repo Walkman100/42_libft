@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/11 13:25:19 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/11 13:44:12 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
-		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o
+		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -94,6 +94,9 @@ ft_strncat.o: ft_strncat.c
 
 ft_strlcat.o: ft_strlcat.c
 	gcc $(GCCFLAGS) -c ft_strlcat.c
+
+ft_strrev.o: ft_strrev.c
+	gcc $(GCCFLAGS) -c ft_strrev.c
 
 ft_strchr.o: ft_strchr.c
 	gcc $(GCCFLAGS) -c ft_strchr.c
