@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/11 13:03:34 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/11 13:12:24 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
-		ft_iswhitespace.o
+		ft_iswhitespace.o ft_atol.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -118,6 +118,9 @@ ft_iswhitespace.o: ft_iswhitespace.c
 
 ft_atoi.o: ft_atoi.c
 	gcc $(GCCFLAGS) -c ft_atoi.c
+
+ft_atol.o: ft_atol.c
+	gcc $(GCCFLAGS) -c ft_atol.c
 
 ft_isalpha.o: ft_isalpha.c
 	gcc $(GCCFLAGS) -c ft_isalpha.c
