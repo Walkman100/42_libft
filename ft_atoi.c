@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/07 16:58:47 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/11 12:17:34 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ static int	ft_atoi_delegate(const char *str, int i, int is_negative)
 			rtn *= 10;
 			if (rtn < 0)
 			{
-				if (is_negative == 1)
-					return (-1);
-				else if (is_negative == -1)
+				if (is_negative == -1)
 					return (0);
 			}
 		}
