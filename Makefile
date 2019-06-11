@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/05 12:47:12 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/11 09:03:01 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,17 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
+so: libft.so
+libft.so: *.c
+	gcc $(GCCFLAGS) -shared -o libft.so -fPIC *.c
+
 clean:
 	/bin/rm -f $(OFILES)
 
 fclean: clean
 	/bin/rm -f $(NAME)
 	/bin/rm -f test
+	/bin/rm -f libft.so
 
 re: fclean all
 
