@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/11 09:03:01 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/11 13:03:34 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_strlcat.o ft_strchr.o ft_strrchr.o ft_memdel.o ft_strdel.o \
 		ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
-		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
+		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
+		ft_iswhitespace.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -111,6 +112,9 @@ ft_strcmp.o: ft_strcmp.c
 
 ft_strncmp.o: ft_strncmp.c
 	gcc $(GCCFLAGS) -c ft_strncmp.c
+
+ft_iswhitespace.o: ft_iswhitespace.c
+	gcc $(GCCFLAGS) -c ft_iswhitespace.c
 
 ft_atoi.o: ft_atoi.c
 	gcc $(GCCFLAGS) -c ft_atoi.c

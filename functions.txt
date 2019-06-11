@@ -30,7 +30,8 @@ ft_strchr        char *ft_strchr(const char *s, int c);                         
 ft_strrchr       char *ft_strrchr(const char *s, int c);                         Y
 ft_intlen        int ft_intlen(int i);                                           Y
  ft_itoa         char *ft_itoa(int n);                                           Y
-ft_atoi          int ft_atoi(const char *str);                                   Y
+ft_iswhitespace  int ft_iswhitespace(int c);                                     Y
+ ft_atoi         int ft_atoi(const char *str);                                   Y
 
 ft_striter       void ft_striter(char *s, void (*f)(char *));                    Y
 ft_striteri      void ft_striteri(char *s, void (*f)(unsigned int, char *));     Y

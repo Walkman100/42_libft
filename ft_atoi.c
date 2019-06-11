@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/11 12:17:34 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/11 13:01:47 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,6 @@ static int	ft_atoi_delegate(const char *str, int i, int is_negative)
 	return (rtn * is_negative);
 }
 
-static int	ft_atoi_is_ignore(char c)
-{
-	if (c == ' ' || c == '\t' || c == '\v' ||
-			c == '\n' || c == '\r' || c == '\f')
-		return (1);
-	return (0);
-}
-
 int			ft_atoi(const char *str)
 {
 	int	i;
@@ -49,7 +41,7 @@ int			ft_atoi(const char *str)
 
 	i = 0;
 	is_negative = 1;
-	while (ft_atoi_is_ignore(str[i]) && str[i] != '-')
+	while (ft_iswhitespace(str[i]) && str[i] != '-')
 	{
 		if (str[i] == 27)
 			return (0);
