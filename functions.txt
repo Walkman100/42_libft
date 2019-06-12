@@ -9,6 +9,7 @@ ft_putchar_fd    void ft_putchar_fd(char c, int fd);                            
   ft_putnbr      void ft_putnbr(int n);                                          Y
    ft_putnbrnl   void ft_putnbrnl(int n);                                        Y
 ft_strlen        size_t ft_strlen(const char *s);                                Y
+ft_strclen       size_t ft_strclen(const char *s, int c);                        Y
 ft_isalpha       int ft_isalpha(int c);                                          Y
 ft_isdigit       int ft_isdigit(int c);                                          Y
  ft_isalnum      int ft_isalnum(int c);                                          Y

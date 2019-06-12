@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/11 13:54:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/12 08:34:53 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void			ft_putendl(char const *s);
 void			ft_putnbr(long n);
 void			ft_putnbrnl(long n);
 size_t			ft_strlen(const char *s);
+size_t			ft_strclen(const char *s, int c);
 int				ft_isalpha(size_t c);
 int				ft_isdigit(size_t c);
 int				ft_isalnum(size_t c);
