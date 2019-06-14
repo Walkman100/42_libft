@@ -34,7 +34,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o \
-		get_tw.o get_th.o
+		get_tw.o get_th.o debug.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -249,3 +249,6 @@ get_tw.o: get_tw.c
 
 get_th.o: get_th.c
 	gcc $(GCCFLAGS) -c get_th.c
+
+debug.o: debug.c
+	gcc $(GCCFLAGS) -c debug.c
