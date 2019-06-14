@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/12 08:30:49 by mcarter          ###   ########.fr        #
+#    Updated: 2019/06/14 10:35:20 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
-		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o
+		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o \
+		get_tw.o get_th.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -45,9 +46,7 @@ clean:
 	/bin/rm -f $(OFILES)
 
 fclean: clean
-	/bin/rm -f $(NAME)
-	/bin/rm -f test
-	/bin/rm -f libft.so
+	/bin/rm -f $(NAME) test libft.so
 
 re: fclean all
 
@@ -244,3 +243,9 @@ ft_lstiter.o: ft_lstiter.c
 
 ft_lstmap.o: ft_lstmap.c
 	gcc $(GCCFLAGS) -c ft_lstmap.c
+
+get_tw.o: get_tw.c
+	gcc $(GCCFLAGS) -c get_tw.c
+
+get_th.o: get_th.c
+	gcc $(GCCFLAGS) -c get_th.c
