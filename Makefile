@@ -18,8 +18,12 @@ GCCFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-test: $(NAME) tests/*.c tests/tests.h libft.h
+test: $(NAME) libft.h tests/tests.h tests/*.c
 	gcc $(GCCFLAGS) tests/*.c -L. -lft -o test
+
+test2files = tests/tests.c tests/2/main.c tests/2/test_*.c
+test2: $(NAME) libft.h tests/tests.h $(test2files)
+	gcc $(GCCFLAGS) $(test2files) -L. -lft -o test2
 
 $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o ft_strlen.o \
@@ -46,7 +50,7 @@ clean:
 	/bin/rm -f $(OFILES)
 
 fclean: clean
-	/bin/rm -f $(NAME) test libft.so
+	/bin/rm -f $(NAME) test test2 libft.so
 
 re: fclean all
 

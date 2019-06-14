@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/05 10:22:57 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/14 10:17:35 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,10 @@ void	test_lstdel(void);
 void	test_lstadd(void);
 void	test_lstiter(void);
 void	test_lstmap(void);
+void	test_atol(void);
+void	test_debug(void);
+void	test_get_th(void);
+void	test_get_tw(void);
+void	test_strclen(void);
+void	test_strrev(void);
 #endif
