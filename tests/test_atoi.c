@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:00:45 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/11 12:19:45 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/14 14:37:10 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	test_atoi(void)
 	testfunc_i("ft_atoi9", ft_atoi("\e06050"), 0);
 	testfunc_i("ft_atoi10", ft_atoi("+1798"), 1798);
 	testfunc_i("ft_atoi11", ft_atoi("+-1798"), 0);
+	testfunc_i("ft_atoi12", ft_atoi(""), 0);
 }
