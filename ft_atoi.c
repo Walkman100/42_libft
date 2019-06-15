@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:29:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/14 16:24:19 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/15 22:55:30 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 		if (rtn < 0)
 			if (is_negative == -1)
 				return (0);
-		rtn += str[i] - '0';
+		rtn += *str - '0';
 		str++;
 	}
 	return (rtn * is_negative);

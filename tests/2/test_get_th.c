@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 09:59:37 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/14 10:24:21 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/15 23:45:54 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	test_get_th(void)
 {
-	testfunc_i("get_th", get_th(), ft_atol(getenv("LINES")));
+	testfunc_s("get_th", ft_itoa(get_th()), getenv("LINES"));
 }

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 09:56:36 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/14 09:59:33 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/15 23:46:28 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	test_get_tw(void)
 {
-	testfunc_i("get_tw", get_tw(), ft_atol(getenv("COLUMNS")));
+	testfunc_s("get_tw", ft_itoa(get_tw()), getenv("COLUMNS"));
 }
