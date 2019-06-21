@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+STR	ft_strjoin(const STR s1, const STR s2)
 {
-	char	*rtn;
+	STR	rtn;
 
 	if (!s1 || !s2)
 		return (NULL);

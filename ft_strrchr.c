@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+STR	ft_strrchr(const STR s, int c)
 {
 	int	slen;
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (slen >= 0)
 	{
 		if (s[slen] == c)
-			return ((char *)s + slen);
+			return ((STR)s + slen);
 		slen--;
 	}
 	return (NULL);

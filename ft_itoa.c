@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+STR	ft_itoa(int n)
 {
-	char	*rtn;
-	int		nlen;
-	int		is_negative;
+	STR	rtn;
+	int	nlen;
+	int	is_negative;
 
 	nlen = ft_intlen(n);
 	rtn = ft_strnew(nlen);

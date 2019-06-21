@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	get_split_count(const char *s, char c)
+static int	get_split_count(const STR s, char c)
 {
 	int		i;
 	int		count;
@@ -41,12 +41,12 @@ static int	get_split_count(const char *s, char c)
 ** sets rtn[i] to a value and checks for NULL
 */
 
-char		**ft_strsplit(const char *s, char c)
+STR			*ft_strsplit(const STR s, char c)
 {
-	char	**rtn;
-	int		i;
-	int		arrcount;
-	int		currlen;
+	STR	*rtn;
+	int	i;
+	int	arrcount;
+	int	currlen;
 
 	if (!s)
 		return (NULL);

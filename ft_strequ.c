@@ -18,7 +18,7 @@
 ** (0 = false)
 */
 
-int		ft_strequ(const char *s1, const char *s2)
+int		ft_strequ(const STR s1, const STR s2)
 {
 	if (s1 == NULL && s2 == NULL)
 		return (1);

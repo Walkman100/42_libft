@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const STR s1, const STR s2)
 {
 	int i;
 	int diff;
@@ -22,7 +22,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	{
 		if (s1[i] - s2[i] != 0 || s1[i] == '\0')
 		{
-			diff = ((unsigned char *)s1)[i] - ((unsigned char *)s2)[i];
+			diff = ((unsigned STR)s1)[i] - ((unsigned STR)s2)[i];
 			if (diff < 0)
 				return (-1);
 			else if (diff > 0)

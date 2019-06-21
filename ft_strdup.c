@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+STR	ft_strdup(const STR s)
 {
-	char	*str;
+	STR	str;
 
 	str = ft_strnew(ft_strlen(s));
 	if (str == NULL)

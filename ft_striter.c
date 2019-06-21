@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_striter(STR s, void (*f)(STR))
 {
 	int	i;
 	int slen;

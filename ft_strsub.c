@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-char	*ft_strsub(const char *s, unsigned int start, size_t len)
+STR	ft_strsub(const STR s, unsigned int start, size_t len)
 {
-	char	*rtn;
+	STR	rtn;
 
 	if (!s)
 		return (NULL);

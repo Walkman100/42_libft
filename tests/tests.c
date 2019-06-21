@@ -12,7 +12,7 @@
 
 #include "tests.h"
 
-void	testfunc_i(const char *fn, int i, int e)
+void	testfunc_i(const STR fn, int i, int e)
 {
 	ft_putstr(BWHITE);
 	ft_putstr(fn);
@@ -29,7 +29,7 @@ void	testfunc_i(const char *fn, int i, int e)
 	}
 }
 
-void	testfunc_s(const char *fn, const char *i, const char *e)
+void	testfunc_s(const STR fn, const STR i, const STR e)
 {
 	ft_putstr(BWHITE);
 	ft_putstr(fn);
@@ -52,7 +52,7 @@ void	testfunc_s(const char *fn, const char *i, const char *e)
 	}
 }
 
-int		strequ(const char *s1, const char *s2)
+int		strequ(const STR s1, const STR s2)
 {
 	int i;
 
@@ -83,7 +83,7 @@ void	print_list(t_list *list)
 		i = 0;
 		while (i < list->content_size)
 		{
-			ft_putchar(((char *)list->content)[i]);
+			ft_putchar(((STR)list->content)[i]);
 			i++;
 		}
 		ft_putchar('\n');

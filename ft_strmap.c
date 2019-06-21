@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-char	*ft_strmap(const char *s, char (*f)(char))
+STR	ft_strmap(const STR s, char (*f)(char))
 {
-	int		i;
-	int		slen;
-	char	*rtn;
+	int	i;
+	int	slen;
+	STR	rtn;
 
 	if (!s)
 		return (NULL);

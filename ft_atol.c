@@ -12,28 +12,28 @@
 
 #include "libft.h"
 
-long	ft_atol(const char *str)
+long	ft_atol(const STR s)
 {
 	int		is_negative;
 	long	rtn;
 
 	is_negative = 1;
-	while (ft_iswhitespace(*str))
-		str++;
-	if (*str == '-' || *str == '+')
+	while (ft_iswhitespace(*s))
+		s++;
+	if (*s == '-' || *s == '+')
 	{
-		if (*str == '-')
+		if (*s == '-')
 			is_negative = -1;
-		str++;
+		s++;
 	}
 	rtn = 0;
-	while (ft_isdigit(*str))
+	while (ft_isdigit(*s))
 	{
 		rtn *= 10;
 		if (rtn < 0 && is_negative == -1)
 			return (0);
-		rtn += *str - '0';
-		str++;
+		rtn += *s - '0';
+		s++;
 	}
 	return (rtn * is_negative);
 }

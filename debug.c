@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-void	debug_2(char *str, const char *caller_name)
+void	debug_2(STR s, const STR caller_name)
 {
 	if (getenv("DEBUG"))
 	{
 		ft_putstr(BCYAN "[DEBUG:");
 		ft_putstr(caller_name);
 		ft_putstr("]" RESET " " BRED);
-		ft_putstr(str);
+		ft_putstr(s);
 		ft_putstr(RESET);
 	}
 }

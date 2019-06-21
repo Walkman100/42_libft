@@ -16,9 +16,9 @@
 # include <stdlib.h>
 # include "../libft.h"
 
-void	testfunc_i(const char *func_name, int input, int test);
-int		strequ(const char *str1, const char *str2);
-void	testfunc_s(const char *func_name, const char *input, const char *test);
+void	testfunc_i(const STR func_name, int input, int test);
+int		strequ(const STR str1, const STR str2);
+void	testfunc_s(const STR func_name, const STR input, const STR test);
 void	print_list(t_list *list);
 void	print_list_i(t_list *list);
 void	test_put(void);

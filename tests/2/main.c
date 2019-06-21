@@ -12,7 +12,7 @@
 
 #include "../tests.h"
 
-int	main(int argc, char **argv)
+int	main(int argc, STR *argv)
 {
 	if (argc == 1 || (argc == 2 && strequ(argv[1], "all")))
 	{
