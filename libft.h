@@ -16,12 +16,12 @@
 # include <stdlib.h>
 
 void			ft_putchar_fd(size_t c, int fd);
-void			ft_putstr_fd(char const *s, int fd);
-void			ft_putendl_fd(char const *s, int fd);
+void			ft_putstr_fd(const char *s, int fd);
+void			ft_putendl_fd(const char *s, int fd);
 void			ft_putnbr_fd(long n, int fd);
 void			ft_putchar(size_t c);
-void			ft_putstr(char const *s);
-void			ft_putendl(char const *s);
+void			ft_putstr(const char *s);
+void			ft_putendl(const char *s);
 void			ft_putnbr(long n);
 void			ft_putnbrnl(long n);
 size_t			ft_strlen(const char *s);
@@ -64,14 +64,14 @@ int				ft_atoi(const char *str);
 long			ft_atol(const char *str);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
-char			*ft_strmap(char const *s, char (*f)(char));
-char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int				ft_strequ(char const *s1, char const *s2);
-int				ft_strnequ(char const *s1, char const *s2, size_t n);
-char			*ft_strsub(char const *s, unsigned int start, size_t len);
-char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strtrim(char const *s);
-char			**ft_strsplit(char const *s, char c);
+char			*ft_strmap(const char *s, char (*f)(char));
+char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+int				ft_strequ(const char *s1, const char *s2);
+int				ft_strnequ(const char *s1, const char *s2, size_t n);
+char			*ft_strsub(const char *s, unsigned int start, size_t len);
+char			*ft_strjoin(const char *s1, const char *s2);
+char			*ft_strtrim(const char *s);
+char			**ft_strsplit(const char *s, char c);
 int				ft_intlen(long n);
 char			*ft_itoa(int n);
 
@@ -91,7 +91,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 size_t			get_tw(void);
 size_t			get_th(void);
-void			debug_2(char *str, char const *caller_name);
+void			debug_2(char *str, const char *caller_name);
 # define DEBUG(x) debug_2(x, __func__)
 
 # define RESET        "\e[0m"

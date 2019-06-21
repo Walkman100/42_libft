@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	debug_2(char *str, char const *caller_name)
+void	debug_2(char *str, const char *caller_name)
 {
 	if (getenv("DEBUG"))
 	{
