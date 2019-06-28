@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/14 11:45:52 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/06/28 13:34:31 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ int				ft_strncmp(const STR s1, const STR s2, size_t n);
 int				ft_iswhitespace(int c);
 int				ft_atoi(const STR s);
 long			ft_atol(const STR s);
-void			ft_striter(STR s, void (*f)(STR ));
-void			ft_striteri(STR s, void (*f)(unsigned int, STR ));
+void			ft_striter(STR s, void (*f)(STR));
+void			ft_striteri(STR s, void (*f)(unsigned int, STR));
 STR				ft_strmap(const STR s, char (*f)(char));
 STR				ft_strmapi(const STR s, char (*f)(unsigned int, char));
 int				ft_strequ(const STR s1, const STR s2);
