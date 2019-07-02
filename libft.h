@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/28 13:34:31 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/02 15:14:40 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,14 +104,6 @@ void			debug_2(STR s, const STR caller_name);
 # define MAGENTA      "\e[35m"
 # define CYAN         "\e[36m"
 # define WHITE        "\e[37m"
-# define BCK_BLACK    "\e[31m"
-# define BCK_RED      "\e[41m"
-# define BCK_GREEN    "\e[42m"
-# define BCK_YELLOW   "\e[43m"
-# define BCK_BLUE     "\e[44m"
-# define BCK_MAGENTA  "\e[45m"
-# define BCK_CYAN     "\e[46m"
-# define BCK_WHITE    "\e[47m"
 # define BBLACK       "\e[1;30m"
 # define BRED         "\e[1;31m"
 # define BGREEN       "\e[1;32m"
@@ -120,7 +112,15 @@ void			debug_2(STR s, const STR caller_name);
 # define BMAGENTA     "\e[1;35m"
 # define BCYAN        "\e[1;36m"
 # define BWHITE       "\e[1;37m"
-# define BCK_BBLACK   "\e[1;31m"
+# define BCK_BLACK    "\e[40m"
+# define BCK_RED      "\e[41m"
+# define BCK_GREEN    "\e[42m"
+# define BCK_YELLOW   "\e[43m"
+# define BCK_BLUE     "\e[44m"
+# define BCK_MAGENTA  "\e[45m"
+# define BCK_CYAN     "\e[46m"
+# define BCK_WHITE    "\e[47m"
+# define BCK_BBLACK   "\e[1;40m"
 # define BCK_BRED     "\e[1;41m"
 # define BCK_BGREEN   "\e[1;42m"
 # define BCK_BYELLOW  "\e[1;43m"
