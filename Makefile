@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/06/14 10:35:20 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/10 13:33:11 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o \
-		get_tw.o get_th.o debug.o
+		get_tw.o get_th.o debug.o get_next_line.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -256,3 +256,6 @@ get_th.o: get_th.c
 
 debug.o: debug.c
 	gcc $(GCCFLAGS) -c debug.c
+
+get_next_line.o: get_next_line.c
+	gcc $(GCCFLAGS) -c get_next_line.c

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/02 15:14:40 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/10 09:40:05 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <errno.h>
 # define STR char *
+# define BUFF_SIZE 32
 
 void			ft_putchar_fd(size_t c, int fd);
 void			ft_putstr_fd(const STR s, int fd);
@@ -89,6 +91,17 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+typedef struct	s_flist
+{
+	int				fd;
+	STR				buff;
+	int				pos;
+	int				eof;
+	struct s_flist	*next;
+}				t_flist;
+
+int				get_next_line(const int fd, STR *line);
 
 size_t			get_tw(void);
 size_t			get_th(void);
