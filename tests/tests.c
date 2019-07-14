@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:49 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/06 11:49:20 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/14 19:55:19 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,65 @@
 
 void	testfunc_i(const STR fn, int i, int e)
 {
-	ft_putstr(BWHITE);
+	put_clr(BWHITE);
 	ft_putstr(fn);
-	ft_putstr(RESET);
+	put_clr(RESET);
 	if (i == e)
-		ft_putendl(": [" BGREEN "Y" RESET "]");
+	{
+		ft_putstr(": [");
+		put_clr(BGREEN);
+		ft_putstr("Y");
+		put_clr(RESET);
+		ft_putendl("]");
+	}
 	else
 	{
-		ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
+		if (isatty(1))
+			ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
+		else
+			ft_putstr(": [N]: in:");
 		ft_putnbr(i);
-		ft_putstr(RESET " expected:" CYAN);
+		put_clr(RESET);
+		ft_putstr(" expected:");
+		put_clr(CYAN);
 		ft_putnbr(e);
-		ft_putendl(RESET);
+		put_clr(RESET);
+		ft_putchar('\n');
 	}
 }
 
 void	testfunc_s(const STR fn, const STR i, const STR e)
 {
-	ft_putstr(BWHITE);
+	put_clr(BWHITE);
 	ft_putstr(fn);
-	ft_putstr(RESET);
+	put_clr(RESET);
 	if (strequ(i, e))
-		ft_putendl(": [" BGREEN "Y" RESET "]");
+	{
+		ft_putstr(": [");
+		put_clr(BGREEN);
+		ft_putstr("Y");
+		put_clr(RESET);
+		ft_putendl("]");
+	}
 	else
 	{
-		ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
+		if (isatty(1))
+			ft_putstr(": [" BRED "N" RESET "]: in:" BMAGENTA);
+		else
+			ft_putstr(": [N]: in:");
 		if (i == NULL)
 			ft_putstr("NULL");
 		else
 			ft_putstr(i);
-		ft_putstr(RESET " expected:" CYAN);
+		put_clr(RESET);
+		ft_putstr(" expected:");
+		put_clr(CYAN);
 		if (e == NULL)
 			ft_putstr("NULL");
 		else
 			ft_putstr(e);
-		ft_putendl(RESET);
+		put_clr(RESET);
+		ft_putchar('\n');
 	}
 }
 

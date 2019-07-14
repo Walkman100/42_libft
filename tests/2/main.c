@@ -45,9 +45,15 @@ int	main(int argc, STR *argv)
 			test_get_next_line();
 		else
 		{
-			ft_putstr_fd(BRED "Test " BCYAN, 2);
+			if (isatty(2))
+				ft_putstr_fd(BRED "Test " BCYAN, 2);
+			else
+				ft_putstr_fd("Test ", 2);
 			ft_putstr_fd(argv[1], 2);
-			ft_putendl_fd(BRED " not found!" RESET, 2);
+			if (isatty(2))
+				ft_putendl_fd(BRED " not found!" RESET, 2);
+			else
+				ft_putendl_fd(" not found!", 2);
 		}
 	}
 	return (0);

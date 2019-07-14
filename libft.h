@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/10 09:40:05 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/14 19:53:23 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ int				get_next_line(const int fd, STR *line);
 
 size_t			get_tw(void);
 size_t			get_th(void);
+void			put_clr(STR c);
 void			debug_2(STR s, const STR caller_name);
 # define DEBUG(x) debug_2(x, __func__)
 
