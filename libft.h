@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/14 19:53:23 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/14 20:12:59 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,25 @@
 # define STR char *
 # define BUFF_SIZE 32
 
+# ifdef __SIZEOF_INT128__
+#  define MAXNBR __int128
+#  define MAXUNBR unsigned __int128
+# else
+#  define MAXNBR long long
+#  define MAXUNBR unsigned long long
+# endif
+
 void			ft_putchar_fd(size_t c, int fd);
 void			ft_putstr_fd(const STR s, int fd);
 void			ft_putendl_fd(const STR s, int fd);
-void			ft_putnbr_fd(long n, int fd);
+void			ft_putnbr_fd(MAXNBR n, int fd);
 void			ft_putchar(size_t c);
 void			ft_putstr(const STR s);
 void			ft_putendl(const STR s);
-void			ft_putnbr(long n);
-void			ft_putnbrnl(long n);
-size_t			ft_strlen(const STR s);
-size_t			ft_strclen(const STR s, int c);
+void			ft_putnbr(MAXNBR n);
+void			ft_putnbrnl(MAXNBR n);
+MAXUNBR			ft_strlen(const STR s);
+MAXUNBR			ft_strclen(const STR s, int c);
 int				ft_isalpha(size_t c);
 int				ft_isdigit(size_t c);
 int				ft_isalnum(size_t c);
@@ -64,7 +72,7 @@ int				ft_strcmp(const STR s1, const STR s2);
 int				ft_strncmp(const STR s1, const STR s2, size_t n);
 int				ft_iswhitespace(int c);
 int				ft_atoi(const STR s);
-long			ft_atol(const STR s);
+MAXNBR			ft_atol(const STR s);
 void			ft_striter(STR s, void (*f)(STR));
 void			ft_striteri(STR s, void (*f)(unsigned int, STR));
 STR				ft_strmap(const STR s, char (*f)(char));
@@ -75,8 +83,8 @@ STR				ft_strsub(const STR s, unsigned int start, size_t len);
 STR				ft_strjoin(const STR s1, const STR s2);
 STR				ft_strtrim(const STR s);
 STR				*ft_strsplit(const STR s, char c);
-int				ft_intlen(long n);
-STR				ft_itoa(int n);
+int				ft_nbrlen(MAXNBR n);
+STR				ft_itoa(MAXNBR n);
 
 typedef struct	s_list
 {

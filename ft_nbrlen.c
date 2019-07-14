@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-int	ft_intlen(long i)
+int	ft_nbrlen(MAXNBR i)
 {
 	if (i < 0)
 	{
 		if (-i < 0)
-			return (ft_intlen(-(i / 10)) + 2);
+			return (ft_nbrlen(-(i / 10)) + 2);
 		else
-			return (ft_intlen(-i) + 1);
+			return (ft_nbrlen(-i) + 1);
 	}
 	else if (i > 9)
-		return (ft_intlen(i / 10) + 1);
+		return (ft_nbrlen(i / 10) + 1);
 	else
 		return (1);
 }

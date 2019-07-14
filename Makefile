@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/14 19:54:21 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/14 20:24:09 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_toupper.o ft_tolower.o ft_strcpy.o ft_strncpy.o ft_strcat.o \
 		ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strnstr.o \
 		ft_memset.o ft_bzero.o ft_strclr.o ft_memalloc.o ft_strnew.o \
-		ft_strdup.o ft_strequ.o ft_strnequ.o ft_intlen.o ft_itoa.o \
+		ft_strdup.o ft_strequ.o ft_strnequ.o ft_nbrlen.o ft_itoa.o \
 		ft_atoi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
 		ft_strlcat.o ft_strchr.o ft_strrchr.o ft_memdel.o ft_strdel.o \
 		ft_memcpy.o ft_memmove.o ft_memccpy.o ft_memcmp.o ft_memchr.o \
@@ -197,8 +197,8 @@ ft_strtrim.o: ft_strtrim.c
 ft_strsplit.o: ft_strsplit.c
 	gcc $(GCCFLAGS) -c ft_strsplit.c
 
-ft_intlen.o: ft_intlen.c
-	gcc $(GCCFLAGS) -c ft_intlen.c
+ft_nbrlen.o: ft_nbrlen.c
+	gcc $(GCCFLAGS) -c ft_nbrlen.c
 
 ft_itoa.o: ft_itoa.c
 	gcc $(GCCFLAGS) -c ft_itoa.c

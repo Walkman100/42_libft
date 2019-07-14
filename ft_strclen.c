@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-size_t	ft_strclen(const STR s, int c)
+MAXUNBR	ft_strclen(const STR s, int c)
 {
-	int i;
+	MAXUNBR i;
 
 	i = 0;
 	while (s[i] != '\0' && s[i] != c)

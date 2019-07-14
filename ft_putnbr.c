@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putnbr(long n)
+void	ft_putnbr(MAXNBR n)
 {
 	ft_putnbr_fd(n, 1);
 }

@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-STR	ft_itoa(int n)
+STR	ft_itoa(MAXNBR n)
 {
 	STR	rtn;
 	int	nlen;
 	int	is_negative;
 
-	nlen = ft_intlen(n);
+	nlen = ft_nbrlen(n);
 	rtn = ft_strnew(nlen);
 	if (!rtn)
 		return (NULL);
@@ -30,7 +30,7 @@ STR	ft_itoa(int n)
 		n = -(n / 10);
 		nlen--;
 	}
-	while (nlen > (0 + is_negative))
+	while (nlen > is_negative)
 	{
 		rtn[nlen - 1] = (n % 10) + '0';
 		n = n / 10;

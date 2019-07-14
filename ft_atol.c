@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-long	ft_atol(const STR s)
+MAXNBR	ft_atol(const STR s)
 {
 	int		is_negative;
-	long	rtn;
+	MAXNBR	rtn;
 
 	is_negative = 1;
 	while (ft_iswhitespace(*s))

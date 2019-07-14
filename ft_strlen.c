@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const STR s)
+MAXUNBR	ft_strlen(const STR s)
 {
-	int i;
+	MAXUNBR i;
 
 	i = 0;
 	while (s[i] != '\0')
