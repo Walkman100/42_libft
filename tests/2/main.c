@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/10 15:19:10 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/15 14:44:03 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, STR *argv)
 		test_get_th();
 		test_debug();
 		test_get_next_line();
+		test_printf();
 		return (0);
 	}
 	if (argc > 1)
@@ -43,6 +44,8 @@ int	main(int argc, STR *argv)
 			test_debug();
 		else if (strequ(argv[1], "gnl") || strequ(argv[1], "get_next_line"))
 			test_get_next_line();
+		else if (strequ(argv[1], "printf"))
+			test_printf();
 		else
 		{
 			if (isatty(2))

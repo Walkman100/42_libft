@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <errno.h>
+# include <stdarg.h>
 # define STR char *
 # define BUFF_SIZE 32
 
@@ -86,6 +87,7 @@ STR				ft_strtrim(const STR s);
 STR				*ft_strsplit(const STR s, char c);
 int				ft_nbrlen(MAXNBR n);
 STR				ft_itoa(MAXNBR n);
+void			ft_printf(STR format, ...);
 
 typedef struct	s_list
 {
