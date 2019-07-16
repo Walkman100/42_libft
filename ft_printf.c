@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:20:56 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/15 16:22:25 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/16 17:37:12 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,25 @@
 ** %u = unsigned number (type unsigned long long)
 */
 
-void	ft_printf(STR format, ...)
+static void	printf_parse_format(char format, va_list argp)
+{
+	if (format == '%')
+		ft_putchar('%');
+	else if (format == 'c')
+		ft_putchar(va_arg(argp, size_t));
+	else if (format == 's')
+		ft_putstr(va_arg(argp, STR));
+	else if (format == 'p')
+		put_clr(va_arg(argp, STR));
+	else if (format == 'i')
+		ft_putnbr(va_arg(argp, long long));
+	else if (format == 'u')
+		ft_putunbr(va_arg(argp, unsigned long long));
+	else
+		ft_putstr_fd("Not implemented", 1);
+}
+
+void		ft_printf(STR format, ...)
 {
 	va_list				argp;
 
@@ -33,21 +51,7 @@ void	ft_printf(STR format, ...)
 		if (*format == '%')
 		{
 			format++;
-			DEBUG(ft_itoa(*format));
-			if (*format == '%')
-				ft_putchar('%');
-			else if (*format == 'c')
-				ft_putchar(va_arg(argp, size_t));
-			else if (*format == 's')
-				ft_putstr(va_arg(argp, char *));
-			else if (*format == 'p')
-				put_clr(va_arg(argp, char *));
-			else if (*format == 'i')
-				ft_putnbr(va_arg(argp, long long));
-			else if (*format == 'u')
-				ft_putunbr(va_arg(argp, unsigned long long));
-			else
-				ft_putstr_fd("Not implemented", 1);
+			printf_parse_format(*format, argp);
 		}
 		else
 			ft_putchar(*format);
