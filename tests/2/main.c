@@ -25,6 +25,7 @@ int	main(int argc, STR *argv)
 		test_get_next_line();
 		test_putunbr();
 		test_printf();
+		test_puthex();
 		return (0);
 	}
 	if (argc > 1)
@@ -49,6 +50,8 @@ int	main(int argc, STR *argv)
 			test_putunbr();
 		else if (strequ(argv[1], "printf"))
 			test_printf();
+		else if (strequ(argv[1], "puthex"))
+			test_puthex();
 		else
 		{
 			if (isatty(2))

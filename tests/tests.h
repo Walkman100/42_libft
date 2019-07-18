@@ -72,4 +72,5 @@ void	test_strrev(void);
 void	test_get_next_line(void);
 void	test_putunbr(void);
 void	test_printf(void);
+void	test_puthex(void);
 #endif

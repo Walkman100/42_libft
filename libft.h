@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/15 14:59:22 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/18 09:05:53 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ STR				*ft_strsplit(const STR s, char c);
 int				ft_nbrlen(MAXNBR n);
 STR				ft_itoa(MAXNBR n);
 void			ft_printf(STR format, ...);
+void			ft_puthex(MAXUNBR n);
 
 typedef struct	s_list
 {
