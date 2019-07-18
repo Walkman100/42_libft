@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr.c                                       :+:      :+:    :+:   */
+/*   test_putunbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 15:00:09 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/18 09:56:06 by mcarter          ###   ########.fr       */
+/*   Created: 2019/07/18 09:57:34 by mcarter           #+#    #+#             */
+/*   Updated: 2019/07/18 10:02:21 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../tests.h"
 
-void	ft_putunbr(MAXUNBR n)
+void	test_putunbr(void)
 {
-	if (n > 9)
-	{
-		ft_putunbr(n / 10);
-		n %= 10;
-	}
-	ft_putchar(n + '0');
+	ft_putunbr(18446744073709551614ULL);
+	ft_putchar(' ');
+	ft_putunbr((MAXUNBR)(18446744073709551615ULL) * 1000);
+	ft_putchar('\n');
+	ft_putstr("Previous line should be: 18446744073709551614 18446744073709551615000\n");
 }
