@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:20:56 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/16 17:37:12 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/18 10:42:16 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 ** %p = colour (type STR)
 ** %i = integer (type long long)
 ** %u = unsigned number (type unsigned long long)
+** %x = print as hex (type unsigned long long)
 */
 
 static void	printf_parse_format(char format, va_list argp)
@@ -37,6 +38,8 @@ static void	printf_parse_format(char format, va_list argp)
 		ft_putnbr(va_arg(argp, long long));
 	else if (format == 'u')
 		ft_putunbr(va_arg(argp, unsigned long long));
+	else if (format == 'x')
+		ft_puthex(va_arg(argp, unsigned long long));
 	else
 		ft_putstr_fd("Not implemented", 1);
 }
