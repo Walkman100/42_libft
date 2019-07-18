@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/16 17:32:24 by mcarter          ###   ########.fr        #
+#    Updated: 2019/07/18 08:51:33 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,9 @@ fclean: clean
 	/bin/rm -f $(NAME) test test2 libft.so
 
 re: fclean all
+
+norm:
+	norminette -R CheckForbiddenSourceHeader *.c libft.h tests/*.c tests/tests.h $(test2files) 2>/dev/null
 
 # individual functions
 
