@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/18 09:05:53 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/18 16:50:50 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,7 @@ STR				ft_strrev(STR s);
 STR				ft_strchr(const STR s, int c);
 STR				ft_strrchr(const STR s, int c);
 STR				ft_strstr(const STR haystack, const STR needle);
-STR				ft_strnstr(const STR haystack, const STR needle,
-					size_t len);
+STR				ft_strnstr(const STR haystack, const STR needle, size_t len);
 int				ft_strcmp(const STR s1, const STR s2);
 int				ft_strncmp(const STR s1, const STR s2, size_t n);
 int				ft_iswhitespace(int c);
@@ -86,6 +85,7 @@ STR				ft_strjoin(const STR s1, const STR s2);
 STR				ft_strtrim(const STR s);
 STR				*ft_strsplit(const STR s, char c);
 int				ft_nbrlen(MAXNBR n);
+int				ft_unbrlen(MAXUNBR n);
 STR				ft_itoa(MAXNBR n);
 void			ft_printf(STR format, ...);
 void			ft_puthex(MAXUNBR n);

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/18 09:59:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/18 16:53:48 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(int argc, STR *argv)
 		test_putunbr();
 		test_printf();
 		test_puthex();
+		test_unbrlen();
 		return (0);
 	}
 	if (argc > 1)
@@ -52,6 +53,8 @@ int	main(int argc, STR *argv)
 			test_printf();
 		else if (strequ(argv[1], "puthex"))
 			test_puthex();
+		else if (strequ(argv[1], "unbrlen"))
+			test_unbrlen();
 		else
 		{
 			if (isatty(2))
