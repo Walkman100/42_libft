@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/18 16:50:50 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/07/29 12:48:11 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ int				ft_strequ(const STR s1, const STR s2);
 int				ft_strnequ(const STR s1, const STR s2, size_t n);
 STR				ft_strsub(const STR s, unsigned int start, size_t len);
 STR				ft_strjoin(const STR s1, const STR s2);
+STR				ft_strjoin3(const STR s1, const STR s2, const STR s3);
 STR				ft_strtrim(const STR s);
 STR				*ft_strsplit(const STR s, char c);
 int				ft_nbrlen(MAXNBR n);
