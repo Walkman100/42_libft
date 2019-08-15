@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 16:43:56 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:14:39 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/15 10:16:04 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	striter_delegate(char *c)
 
 void		test_striter(void)
 {
-	char buf[4];
+	char buf[5];
 
 	ft_strcpy(buf, "5678");
 	ft_striter(buf, &striter_delegate);

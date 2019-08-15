@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 17:44:59 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:52:40 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/15 11:35:17 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	strmap_delegate(char c)
 
 void		test_strmap(void)
 {
-	char buf[4];
+	char buf[5];
 
 	ft_strcpy(buf, "5678");
 	testfunc_s("ft_strmap", ft_strmap(buf, &strmap_delegate), "5611");

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 17:30:54 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 17:32:11 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/15 11:34:20 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	striteri_delegate(unsigned int i, char *c)
 
 void		test_striteri(void)
 {
-	char buf[4];
+	char buf[5];
 
 	ft_strcpy(buf, "5678");
 	ft_striteri(buf, &striteri_delegate);

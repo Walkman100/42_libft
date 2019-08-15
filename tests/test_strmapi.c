@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 17:59:57 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/03 18:03:55 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/15 11:35:43 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	strmapi_delegate(unsigned int i, char c)
 
 void		test_strmapi(void)
 {
-	char buf[4];
+	char buf[5];
 
 	ft_strcpy(buf, "5678");
 	testfunc_s("ft_strmapi", ft_strmapi(buf, &strmapi_delegate), "0123");

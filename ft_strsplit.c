@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:25:47 by mcarter           #+#    #+#             */
-/*   Updated: 2019/06/07 18:08:54 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/15 10:20:43 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ STR			*ft_strsplit(const STR s, char c)
 	if (!rtn)
 		return (NULL);
 	i = -1;
-	while (i++ < arrcount)
+	while (++i < arrcount)
 	{
 		while (*s == c)
 			s++;
