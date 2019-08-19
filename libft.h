@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/29 12:48:11 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/19 14:04:40 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
+# define MEMDEL(x) ft_memdel((void **)&x)
+
 STR				ft_strnew(size_t size);
 void			ft_strdel(STR *as);
 void			ft_strclr(STR s);
