@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:22:38 by mcarter           #+#    #+#             */
-/*   Updated: 2019/05/27 09:18:14 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/08/19 14:58:50 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int		ft_strequ(const STR s1, const STR s2)
 	if (s1 == NULL && s2 == NULL)
 		return (1);
 	else if (s1 == NULL || s2 == NULL)
-		return (0);
-	else if (ft_strlen(s1) != ft_strlen(s2))
 		return (0);
 	return (!ft_strcmp(s1, s2));
 }
