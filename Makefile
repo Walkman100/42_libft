@@ -6,15 +6,14 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/07/29 12:47:01 by mcarter          ###   ########.fr        #
+#    Updated: 2019/08/25 01:35:43 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
 OFILES = *.o
-
 GCCFLAGS = -Wall -Wextra -Werror
+MAKEFLAGS += -j
 
 all: $(NAME)
 
@@ -53,7 +52,8 @@ clean:
 fclean: clean
 	/bin/rm -f $(NAME) test test2 libft.so
 
-re: fclean all
+re: fclean
+	make all
 
 norm:
 	norminette -R CheckForbiddenSourceHeader *.c libft.h tests/*.c tests/tests.h $(test2files) 2>/dev/null
