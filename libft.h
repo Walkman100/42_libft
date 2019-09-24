@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/08/19 14:04:40 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/09/24 13:49:03 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void			ft_putnbrnl(MAXNBR n);
 void			ft_putunbr(MAXUNBR n);
 MAXUNBR			ft_strlen(const STR s);
 MAXUNBR			ft_strclen(const STR s, int c);
+MAXUNBR			ft_chrcount(const STR s, int c);
 int				ft_isalpha(size_t c);
 int				ft_isdigit(size_t c);
 int				ft_isalnum(size_t c);

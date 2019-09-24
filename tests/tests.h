@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 10:03:53 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/29 12:52:52 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/09/24 13:57:27 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,5 @@ void	test_printf(void);
 void	test_puthex(void);
 void	test_unbrlen(void);
 void	test_strjoin3(void);
+void	test_chrcount(void);
 #endif
