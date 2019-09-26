@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_puthex.c                                      :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/18 09:07:42 by mcarter           #+#    #+#             */
-/*   Updated: 2019/09/26 17:25:20 by mcarter          ###   ########.fr       */
+/*   Created: 2019/09/26 17:27:40 by mcarter           #+#    #+#             */
+/*   Updated: 2019/09/26 17:55:13 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../tests.h"
+#include "libft.h"
 
-void	test_puthex(void)
+void	*ft_realloc(void *ptr, size_t size)
 {
-	ft_puthex(255);
-	ft_putchar(' ');
-	ft_puthex(5156454);
-	ft_putchar('\n');
-	ft_putstr(BCYAN "Previous line should be:" RESET " ff 4eae66\n");
-	ft_puthex(18446744073709551614ULL);
-	ft_putchar(' ');
-	ft_puthex((MAXUNBR)(18446744073709551615ULL) * 1000);
-	ft_putchar('\n');
-	ft_putstr(BCYAN "Previous line should be:" RESET " fffffffffffffffe 3e7fffffffffffffc18\n");
+	void	*rtn;
+
+	rtn = ft_memalloc(size);
+	if (rtn == NULL)
+		return (NULL);
+	if (ptr)
+		ft_memcpy(rtn, ptr, size);
+	ft_memdel(&ptr);
+	return (rtn);
 }

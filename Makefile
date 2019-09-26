@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/09/24 13:52:38 by mcarter          ###   ########.fr        #
+#    Updated: 2019/09/26 17:48:59 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_lstdel.o ft_lstdelone.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o \
 		get_tw.o get_th.o debug.o get_next_line.o put_clr.o ft_putunbr.o \
-		ft_printf.o ft_puthex.o ft_unbrlen.o ft_strjoin3.o ft_chrcount.o
+		ft_printf.o ft_puthex.o ft_unbrlen.o ft_strjoin3.o ft_chrcount.o \
+		ft_realloc.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -284,3 +285,6 @@ ft_strjoin3.o: ft_strjoin3.c
 
 ft_chrcount.o: ft_chrcount.c
 	gcc $(GCCFLAGS) -c ft_chrcount.c
+
+ft_realloc.o: ft_realloc.c
+	gcc $(GCCFLAGS) -c ft_realloc.c

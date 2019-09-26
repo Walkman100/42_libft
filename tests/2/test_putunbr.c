@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 09:57:34 by mcarter           #+#    #+#             */
-/*   Updated: 2019/07/18 10:02:21 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/09/26 17:23:23 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	test_putunbr(void)
 	ft_putchar(' ');
 	ft_putunbr((MAXUNBR)(18446744073709551615ULL) * 1000);
 	ft_putchar('\n');
-	ft_putstr("Previous line should be: 18446744073709551614 18446744073709551615000\n");
+	ft_putstr(BCYAN "Previous line should be:" RESET " 18446744073709551614 18446744073709551615000\n");
 }
