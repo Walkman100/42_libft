@@ -6,7 +6,7 @@
 #    By: mcarter <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/22 12:22:08 by mcarter           #+#    #+#              #
-#    Updated: 2019/09/26 17:48:59 by mcarter          ###   ########.fr        #
+#    Updated: 2019/09/26 18:37:54 by mcarter          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ $(NAME): ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 		ft_iswhitespace.o ft_atol.o ft_putnbrnl.o ft_strrev.o ft_strclen.o \
 		get_tw.o get_th.o debug.o get_next_line.o put_clr.o ft_putunbr.o \
 		ft_printf.o ft_puthex.o ft_unbrlen.o ft_strjoin3.o ft_chrcount.o \
-		ft_realloc.o
+		ft_realloc.o ft_parrlen.o
 	ar rc $(NAME) $(OFILES)
 	ranlib $(NAME)
 
@@ -288,3 +288,6 @@ ft_chrcount.o: ft_chrcount.c
 
 ft_realloc.o: ft_realloc.c
 	gcc $(GCCFLAGS) -c ft_realloc.c
+
+ft_parrlen.o: ft_parrlen.c
+	gcc $(GCCFLAGS) -c ft_parrlen.c

@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:42:43 by mcarter           #+#    #+#             */
-/*   Updated: 2019/09/26 17:40:03 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/09/26 18:39:02 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, STR *argv)
 		test_strjoin3();
 		test_chrcount();
 		test_realloc();
+		test_parrlen();
 		return (0);
 	}
 	if (argc > 1)
@@ -64,6 +65,8 @@ int	main(int argc, STR *argv)
 			test_chrcount();
 		else if (strequ(argv[1], "realloc"))
 			test_realloc();
+		else if (strequ(argv[1], "parrlen"))
+			test_parrlen();
 		else
 		{
 			if (isatty(2))

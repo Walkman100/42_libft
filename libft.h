@@ -6,7 +6,7 @@
 /*   By: mcarter <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:26:26 by mcarter           #+#    #+#             */
-/*   Updated: 2019/09/26 17:27:00 by mcarter          ###   ########.fr       */
+/*   Updated: 2019/09/26 18:37:23 by mcarter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int				ft_unbrlen(MAXUNBR n);
 STR				ft_itoa(MAXNBR n);
 void			ft_printf(STR format, ...);
 void			ft_puthex(MAXUNBR n);
+MAXUNBR			ft_parrlen(void **arr);
 
 typedef struct	s_list
 {
